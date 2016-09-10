@@ -7,23 +7,23 @@
     <body>
         <header class="page-header">
             <nav class="main-nav">
-                <ul class="main-nav__list  main-nav-list__closed">
-                    <li class="main-nav__item"><a>Главная</a></li>
-                    <li class="main-nav__item"><a href="">Фотографии</a></li>
-                    <li class="main-nav__item"><a href="">Конкурс</a></li>
-                    <li class="main-nav__item"><a href="">HTML Academy</a></li>
+                <ul class="main-nav__list  main-nav__list--closed">
+                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Главная</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
                 </ul>
             </nav>
             <div class="page-header__bar  page-header__bar--closed-nav">
-                <a class="page-header__logo" href="">Pink</a>
-                <button class="page-header__btn" type="button"></button>
+                <a class="page-header__logo" href="#">Pink</a>
+                <button class="page-header__btn" type="button">open nav</button>
             </div>
             <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
         </header>
         <main class="main">
             <section class="promo">
                 <div class="download">
-                    <a class="download__get-app  btn" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
+                    <a class="download__get-app" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
                     <div class="download__links">
                         <a class="download__link  download__link--apple" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8"></a>
                         <a class="download__link  download__link--android" href="https://play.google.com/store/apps?hl=ru"></a>
@@ -50,20 +50,20 @@
           			  	<p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           			</div>
           	</section>
-            <section class="feedback  slider">
-          			<blockquote class="feedback__item  slider__item  slider__item--active">
-            				<cite class="feedback__author">Николай Петров</cite>
-            				<q class="feedback__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                    А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+            <section class="feedback-slider">
+          			<blockquote class="feedback-slider__item  feedback-slider__item--active">
+            				<span class="feedback-slider__author">Николай Петров</span>
+            				<cite class="feedback-slider__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился
+                    со своей будущей женой в комментариях к выложенной фотографии!</cite>
           			</blockquote>
-          			<div class="slider__controls">
-            				<span class="slider__radio  slider__radio--active"></span>
-            				<span class="slider__radio"></span>
-            				<span class="slider__radio"></span>
+          			<div class="slider-controls">
+            				<span class="slider-controls__radio  slider-controls__radio--active"></span>
+            				<span class="slider-controls__radio"></span>
+            				<span class="slider-controls__radio"></span>
           			</div>
         		</section>
-            <section class="price slider">
-          			<div class="price__item  price__item--hit  slider__item  slider__item--active">
+            <section class="price">
+          			<div class="price__item  price__item--hit  price__item--active">
             				<div class="price__header">
               					<span class="price__name">Стандарт</span>
               					<span class="price__cost">3,99 USD</span>
@@ -74,10 +74,10 @@
               					<li class="price__option">Комментарии</li>
             				</ul>
           			</div>
-          			<div class="slider__controls">
-            				<span class="slider__radio"></span>
-            				<span class="slider__radio  slider__radio--active"></span>
-            				<span class="slider__radio"></span>
+          			<div class="slider-controls">
+            				<span class="slider-controls__radio"></span>
+            				<span class="slider-controls__radio  slider-controls__radio--active"></span>
+            				<span class="slider-controls__radio"></span>
           			</div>
         		</section>
             <section class="contacts">
