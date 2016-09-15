@@ -1,0 +1,72 @@
+.gallery {
+    width: 320px;
+}
+.gallery__header {
+    @include block-reset;
+    padding: 46px 35px 50px;
+    @include font-size(14px, 30px, normal);
+    color: $primary-color;
+    text-align: center;
+}
+.gallery__item {
+    padding: 0;
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &--best {
+        width: 320px;
+    }
+}
+.gallery__photo {
+    position: relative;
+    img {
+        display: block;
+    }
+    &--best::before {
+        @include position-pseudo(auto, auto, auto, 20px);
+        @include size(140px, 36px);
+        @include font-size(12px, 36px, bold, uppercase);
+        content: "Панорама дня";
+        background-color: $secondary-color;
+        color: #fff;
+        text-align: center;
+    }
+}
+.gallery__comments {
+    margin: 0 auto;
+    padding: 17px 17px 21px;
+    width: 246px;
+    background-color: #f2f2f2;
+}
+.gallery__author {
+    @include cards;
+    @include font-size(14px, 24px, bold);
+    font-style: normal;
+    color: $primary-color;
+}
+.gallery__date {
+    @include cards;
+    @include font-size(12px, 24px, lighter, uppercase);
+}
+.gallery__desc {
+    @include block-reset;
+    margin-bottom: 9px;
+    @include font-size(14px, 24px, normal);
+}
+.gallery__like-btn {
+    @include font-size(12px, 24px, normal, uppercase);
+    position: relative;
+    display: block;
+    padding-left: 33px;
+    text-decoration: none;
+    color: $secondary-color;
+    &::before {
+        @include position-pseudo(5px, 0);
+        @include size(14px, 14px);
+        background: transparent url("../img/icon-heart.svg") no-repeat 50% 50%;
+        color: $secondary-color;
+    }
+}

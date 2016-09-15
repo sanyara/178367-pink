@@ -1,0 +1,33 @@
+.page-header {
+    width: 320px;
+    color: #fff;
+}
+.page-header__bar {
+    padding: 21px 20px 18px;
+    background-color:  $primary-color;
+    border: 1px solid #485461;
+    border-left-style: none;
+    border-right-style: none;
+}
+.page-header__logo {
+    @include cards;
+}
+.page-header__btn {
+    @include cards;
+    @include btn-reset;
+    @include size(23px, 23px);
+    position: relative;
+    text-indent: -9999px;
+    background-color: transparent;
+    &::before, &::after {
+        @include position-pseudo(50%, 50%);
+        @include size(30px, 5px);
+        margin-left: -15px;
+        margin-top: -2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

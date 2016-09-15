@@ -1,0 +1,20 @@
+.feedback-slider {
+    padding-bottom: 32px;
+    width: 320px;
+    text-align: center;
+}
+.feedback-slider__item {
+    @include block-reset;
+}
+.feedback-slider__author {
+    @include font-size(18px, 30px, bold);
+    display: block;
+    padding: 42px 0 14px;
+    font-style: normal;
+}
+.feedback-slider__text {
+    @include block-reset;
+    @include font-size(14px, 30px, normal);
+    padding: 0 20px;
+    color: $primary-color;
+}

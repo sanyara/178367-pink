@@ -1,0 +1,7 @@
+.logo {
+    padding: 40px;
+    text-align: center;
+    img {
+        @include cards;
+    }
+}

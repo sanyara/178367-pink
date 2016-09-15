@@ -1,0 +1,22 @@
+.page-footer {
+    width: 320px;
+    text-align: center;
+}
+.page-footer__copyright {
+    margin: 0;
+    padding: 37px 0 0;
+}
+.page-footer__copyright-link {
+    @include cards;
+    @include size(27px, 35px);
+    vertical-align: middle;
+    text-indent: -9999px;
+    background: transparent url("../img/logo-htmlacademy.svg") no-repeat 50% bottom;
+}
+.page-footer__copyright-text {
+    @include cards;
+    @include block-reset;
+    @include font-size(14px, 18px, normal);
+    margin-right: 10px;
+    vertical-align: middle;
+}

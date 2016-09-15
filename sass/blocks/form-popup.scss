@@ -1,0 +1,24 @@
+.form-popup {
+    padding: 45px 0 0;
+    width: 320px;
+    text-align: center;
+}
+.form-popup__header {
+    @include block-reset;
+    @include font-size(18px, 24px, bold);
+    margin-bottom: 26px;
+}
+.form-popup__text {
+    @include block-reset;
+    @include font-size(14px, 24px, normal);
+    margin-bottom: 30px;
+    padding: 0 20px;
+    color: $primary-color;
+    &--failure {
+        margin-bottom: 40px;
+    }
+}
+.form-popup__wrap {
+    padding: 50px 0 17px;
+    background-color: #f2f2f2;
+}

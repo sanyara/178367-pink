@@ -1,0 +1,19 @@
+.main-nav {
+    background-color: $primary-color;
+}
+.main-nav__list {
+    @include block-reset;
+    list-style: none;
+}
+.main-nav__link {
+    @include font-size(18px, 32px, bold, uppercase);
+    display: block;
+    padding: 15px 0;
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #485461;
+    border-bottom-color: #000001;
+    border-left-style: none;
+    border-right-style: none;
+}

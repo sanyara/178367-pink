@@ -1,0 +1,36 @@
+.download {
+    padding: 26px 0 31px;
+    width: 320px;
+    color: #fff;
+    background-color: #1d2631;
+}
+.download__links {
+    font-size: 0;
+    padding: 25px 0 5px;
+    text-align: center;
+}
+.download__link {
+    @include cards;
+    @include size(50px, 80px);
+    @include font-size(14px);
+    margin-right: 30px;
+    background-color: #fff;
+    &--apple {
+        background: transparent url('../img/logo-apple.svg') no-repeat 50% 30%;
+    }
+    &--android {
+        background: transparent url('../img/logo-android.svg') no-repeat 50% 50%;
+    }
+    &--microsoft {
+        background: transparent url('../img/logo-microsoft.svg') no-repeat 50% 50%;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.download__info {
+    @include font-size(14px, 24px, lighter);
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 240px;
+}

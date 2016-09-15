@@ -1,0 +1,19 @@
+.slider-controls {
+    padding: 38px 47px;
+    font-size: 0;
+}
+.slider-controls__radio {
+    @include cards;
+    @include size(6px, 6px);
+    margin-right: 19px;
+    background-color: #bec2c7;
+    border-radius: 50%;
+    font-size: 14px;
+    &--active {
+        background-color: transparent;
+        box-shadow: 0 0 0 3px $primary-color;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
