@@ -3,9 +3,8 @@
 }
 .gallery__header {
     @include block-reset;
-    padding: 46px 35px 50px;
     @include font-size(14px, 30px, normal);
-    color: $primary-color;
+    padding: 46px 35px 50px;
     text-align: center;
 }
 .gallery__item {
@@ -43,9 +42,8 @@
 }
 .gallery__author {
     @include cards;
-    @include font-size(14px, 24px, bold);
+    font-weight: bold;
     font-style: normal;
-    color: $primary-color;
 }
 .gallery__date {
     @include cards;
@@ -54,13 +52,13 @@
 .gallery__desc {
     @include block-reset;
     margin-bottom: 9px;
-    @include font-size(14px, 24px, normal);
 }
 .gallery__like-btn {
-    @include font-size(12px, 24px, normal, uppercase);
     position: relative;
     display: block;
     padding-left: 33px;
+    font-size: 12px;
+    text-transform: uppercase;
     text-decoration: none;
     color: $secondary-color;
     &::before {

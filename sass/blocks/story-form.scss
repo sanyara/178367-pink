@@ -22,14 +22,15 @@
     }
 }
 .story-form__caption {
-    @include font-size(14px, 30px, normal, uppercase);
+    line-height: 30px;
+    text-transform: uppercase;
     display: block;
     margin-bottom: 5px;
     padding-left: 22px;
     color: $secondary-color;
 }
 .story-form__field {
-    @include font-size(18px, 30px, normal);
+    @include font-size(18px, 30px);
     width: 100%;
     padding: 14px 21px 16px;
     margin-bottom: 16px;
@@ -80,6 +81,7 @@
     display: none;
 }
 .story-form__legend {
-    @include font-size(14px, 30px, normal, uppercase);
+    line-height: 30px;
+    text-transform: uppercase;
     text-align: center;
 }

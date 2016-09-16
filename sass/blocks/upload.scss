@@ -2,10 +2,9 @@
     width: 320px;
 }
 .upload__header {
-    @include font-size(14px, 30px, normal);
     padding: 44px 30px 43px;
     margin: 0;
-    color: $primary-color;
+    line-height: 30px;
     text-align: center;
 }
 .upload__photo {

@@ -8,9 +8,7 @@
 }
 .features__slogan {
     @include block-reset;
-    @include font-size(24px, 30px, lighter);
     margin-bottom: 27px;
-    color: $primary-color;
     text-align: center;
 }
 .features__list {
@@ -22,12 +20,10 @@
 }
 .features__title {
     @include block-reset;
-    @include font-size(18px, 18px, bold);
     padding-bottom: 15px;
 }
 .features__text {
     @include block-reset;
-    @include font-size(14px, 24px, normal);
 }
 .features__picture {
     min-height: 278px;

@@ -2,9 +2,8 @@
     width: 320px;
 }
 .competition__info {
-    @include font-size(14px, 30px, normal);
     padding: 46px 20px 35px;
     margin: 0;
-    color: $primary-color;
+    line-height: 30px;
     text-align: center;
 }

@@ -14,7 +14,6 @@
 }
 .feedback-slider__text {
     @include block-reset;
-    @include font-size(14px, 30px, normal);
+    line-height: 30px;
     padding: 0 20px;
-    color: $primary-color;
 }

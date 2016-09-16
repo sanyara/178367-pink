@@ -16,7 +16,7 @@
 .page-footer__copyright-text {
     @include cards;
     @include block-reset;
-    @include font-size(14px, 18px, normal);
+    line-height: 18px;
     margin-right: 10px;
     vertical-align: middle;
 }

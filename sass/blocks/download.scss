@@ -12,7 +12,6 @@
 .download__link {
     @include cards;
     @include size(50px, 80px);
-    @include font-size(14px);
     margin-right: 30px;
     background-color: #fff;
     &--apple {
@@ -29,7 +28,7 @@
     }
 }
 .download__info {
-    @include font-size(14px, 24px, lighter);
+    font-weight: lighter;
     padding: 0 10px;
     margin: 0 auto;
     width: 240px;

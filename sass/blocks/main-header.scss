@@ -2,12 +2,11 @@
     width: 320px;
     min-height: 237px;
     padding-top: 0;
-    color: #fff;
     background:  #2a3a4a url("../img/bg-back-mobile@1x.jpg") no-repeat;
 }
 .main-header__title {
     @include block-reset;
-    @include font-size(24px, 24px, lighter);
+    color: #fff;
     background-color: transparent;
     text-align: center;
     &--promo {

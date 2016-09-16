@@ -32,7 +32,7 @@
 .price__option {
     position: relative;
     padding: 15px 21px;
-    @include font-size(14px, 30px, normal);
+    line-height: 30px;
     border: 2px solid #fff;
     border-top-style: none;
     &::after, &::before {
