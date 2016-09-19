@@ -1,0 +1,38 @@
+@mixin cards() {
+    display: inline-block;
+    vertical-align: top;
+}
+@mixin font-size($font-size: auto, $line-height: auto, $font-weight: auto, $transform: auto) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-transform: $transform;
+}
+@mixin position($top: auto, $left: auto, $bottom: auto, $right:auto) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+@mixin position-pseudo($top: auto, $left: auto, $bottom: auto, $right:auto) {
+    position: absolute;
+    content: "";
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+@mixin size($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+@mixin btn-reset() {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@mixin block-reset() {
+    margin: 0;
+    padding: 0;
+}

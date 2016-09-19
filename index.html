@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Pink</title>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
@@ -15,46 +16,54 @@
                 </ul>
             </nav>
             <div class="page-header__bar  page-header__bar--closed-nav">
-                <a class="page-header__logo" href="#">Pink</a>
+                <a class="page-header__logo" href="#">
+                    <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+                </a>
                 <button class="page-header__btn" type="button">Развернуть меню</button>
             </div>
-            <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
         </header>
         <main class="main">
-            <div class="promo">
-                <div class="download">
-                    <a class="btn" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
-                    <div class="download__links">
-                        <a class="download__link  download__link--apple" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8"></a>
-                        <a class="download__link  download__link--android" href="https://play.google.com/store/apps?hl=ru"></a>
-                        <a class="download__link  download__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows"></a>
-                    </div>
-                    <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <div class="main-header main-header--promo">
+                <h2 class="main-header__title  main-header__title--promo">Взгляните на жизнь иначе!</h2>
+                <div class="main-header__picture">
+                    <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Pink application">
                 </div>
+            </div>
+            <div class="download">
+                <a class="btn" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
+                <div class="download__links">
+                    <a class="download__link  download__link--apple" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8"></a>
+                    <a class="download__link  download__link--android" href="https://play.google.com/store/apps?hl=ru"></a>
+                    <a class="download__link  download__link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows"></a>
+                </div>
+                <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
             </div>
             <section class="features">
                 <div class="features__offer">
                     <h2 class="features__slogan">Устали от серости мегаполиса?</h2>
                     <h2 class="features__slogan">Нам есть, что вам предложить!</h2>
                 </div>
-                <div class="features__item">
-                    <h3 class="features__title">Поднимает настроение</h3>
-                    <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                <div class="features__list">
+                    <div class="features__item">
+                        <h3 class="features__title">Поднимает настроение</h3>
+                        <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                    </div>
+                    <div class="features__item">
+                        <h3 class="features__title">Меняет мир вокруг</h3>
+                        <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    </div>
+                    <div class="features__item">
+                        <h3 class="features__title">Заводит новых друзей</h3>
+                        <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </div>
                 </div>
-                <div class="features__item">
-                    <h3 class="features__title">Меняет мир вокруг</h3>
-                    <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-                </div>
-                <div class="features__item">
-                    <h3 class="features__title">Заводит новых друзей</h3>
-                    <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-                </div>
+                <div class="features__picture"></div>
             </section>
             <section class="feedback-slider">
                 <blockquote class="feedback-slider__item  feedback-slider__item--active">
                     <cite class="feedback-slider__author">Николай Петров</cite>
-                    <p class="feedback-slider__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился
-                    со своей будущей женой в комментариях к выложенной фотографии!</p>
+                    <p class="feedback-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился
+                    со своей будущей женой в комментариях к выложенной фотографии!»</p>
                 </blockquote>
                 <div class="slider-controls">
                     <span class="slider-controls__radio  slider-controls__radio--active"></span>
@@ -65,12 +74,12 @@
             <section class="price">
                 <div class="price__item  price__item--hit  price__item--active">
                     <div class="price__header">
-                        <span class="price__name">Стандарт</span>
-                        <span class="price__cost">3,99 USD</span>
+                        <div class="price__name">Стандарт</div>
+                        <div class="price__cost">3,99 USD</div>
                     </div>
                     <ul class="price__list">
-                        <li class="price__option">Розовый фильтр</li>
-                        <li class="price__option">Смайлики</li>
+                        <li class="price__option price__option--included">Розовый фильтр</li>
+                        <li class="price__option price__option--included">Смайлики</li>
                         <li class="price__option">Комментарии</li>
                     </ul>
                 </div>
@@ -81,18 +90,18 @@
                 </div>
             </section>
             <section class="contacts">
-                <p class="contacts__header">Остались вопросы? Свяжитесь с нами!</p>
+                <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
                 <div class="contacts__item">
-                    <span class="contacts__title">Звоните:</span>
-                    <a class="contacts__info" href="tel:+78125556666">+7(812)555-66-66</a>
+                    <h3 class="contacts__title">Звоните:</h3>
+                    <a class="contacts__info" href="tel:+78125556666">+7 (812) 555-66-66</a>
                 </div>
                 <div class="contacts__item">
-                    <span class="contacts__title">Пишите:</span>
-                    <span class="contacts__info">mail@htmlacademy.ru</span>
+                    <h3 class="contacts__title">Пишите:</h3>
+                    <div class="contacts__info">mail@htmlacademy.ru</div>
                 </div>
                 <div class="contacts__item">
-                    <span class="contacts__title">Приезжайте в гости</span>
-                    <span class="contacts__info">ул. Большая Конюшенная, 19/8</span>
+                    <h3 class="contacts__title">Приезжайте в гости</h3>
+                    <div class="contacts__info">ул. Большая Конюшенная, 19/8</div>
                 </div>
                 <div class="contacts__map"></div>
             </section>
