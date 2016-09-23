@@ -1,8 +1,12 @@
 .download {
     padding: 26px 0 31px;
-    width: 320px;
+    width: 100%;
     color: #fff;
     background-color: #1d2631;
+}
+.download__wrapper {
+    width: 320px;
+    margin: 0 auto;
 }
 .download__links {
     font-size: 0;
@@ -32,4 +36,39 @@
     padding: 0 10px;
     margin: 0 auto;
     width: 240px;
+    text-align: center;
+}
+
+@media #{$tablet-widths} {
+    .download {
+        background: transparent;
+    }
+    .download__wrapper {
+        margin: 0;
+    }
+    .download__info {
+        position: relative;
+        left: -7px;
+        padding: 0;
+        width: 320px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .download__links {
+        margin-bottom: 15px;
+        width: 298px;
+    }
+}
+@media #{$desktop-widths} {
+    .download__wrapper {
+        width: 940px;
+        margin: 0 auto;
+    }
+    .download__links {
+        margin-bottom: 32px;
+    }
+    .download__info {
+        width: 310px;
+        margin: 0;
+    }
 }

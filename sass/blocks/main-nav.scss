@@ -1,5 +1,6 @@
 .main-nav {
     background-color: $primary-color;
+    display: none;
 }
 .main-nav__list {
     @include block-reset;
@@ -16,4 +17,29 @@
     border-bottom-color: #000001;
     border-left-style: none;
     border-right-style: none;
+}
+
+@media #{$desktop-widths} {
+    .main-nav {
+        display: block;
+        float: right;
+        padding-top: 38px;
+        max-width: 790px;
+        background-color: transparent;
+    }
+    .main-nav__list {
+        font-size: 0;
+
+    }
+    .main-nav__item {
+        @include cards;
+        margin-left: 80px;
+
+    }
+    .main-nav__link {
+        padding: 0;
+        text-transform: none;
+        font-weight: normal;
+        border: none;
+    }
 }

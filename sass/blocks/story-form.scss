@@ -1,6 +1,6 @@
 .story-form {
     margin: 0 auto;
-    width: 320px;
+    min-width: 320px;
 }
 .story-form__item {
     @include block-reset;
@@ -19,6 +19,9 @@
     }
     &--buttons {
         margin-bottom: 15px;
+    }
+    &--emotions {
+        margin-bottom: 25px;
     }
 }
 .story-form__caption {
@@ -47,11 +50,19 @@
 }
 .story-form__item-title {
     @include block-reset;
+    @include cards;
     @include font-size(14px, 18px, normal, uppercase);
-    display: block;
     padding: 36px 20px 42px;
     color: $secondary-color;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    &--user-contacts {
+        display: none;
+    }
+    &--emotions {
+        padding-bottom: 18px;
+    }
 }
 .story-form__label {
     @include font-size(18px, 30px, normal);
@@ -84,4 +95,174 @@
     line-height: 30px;
     text-transform: uppercase;
     text-align: center;
+}
+@media #{$tablet-widths} {
+    .story-form__field-group {
+        width: 100%;
+        margin-bottom: 53px;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            margin-bottom: 22px;
+        }
+    }
+    .story-form__caption {
+        padding-left: 0;
+        margin-right: 19px;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .story-form__field {
+        flex-grow: 1;
+        margin-bottom: 0;
+        &--textarea {
+            padding-bottom: 28px;
+        }
+    }
+    .story-form {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 40px;
+    }
+    .story-form__item {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 57px;
+        font-size: 0;
+        border: 1px solid black;
+        border-radius: 2px;
+        &:first-child {
+            margin-bottom: 35px;
+        }
+        &--name {
+            order: -5;
+            border: none;
+        }
+        &--achievements {
+            padding: 49px 60px 0;
+            margin-bottom: 60px;
+            width: 100%;
+            order: -2;
+        }
+        &--platform {
+            padding: 50px 0 13px 59px;
+            width: 100%;
+            order: -4;
+        }
+        &--user-contacts {
+            padding: 37px 60px;
+            width: 100%;
+            order: -3;
+        }
+        &--emotions {
+            padding: 37px 60px 52px;
+            margin-bottom: 67px;
+            width: 100%;
+
+        }
+        &--buttons {
+            display: block;
+            width: 100%;
+            text-align: justify;
+            font-size: 14px;
+        }
+        &--emotions {
+            order: -2;
+        }
+    }
+    .story-form__caption--contacts {
+        display: none;
+    }
+    .story-form__field {
+        &--contacts {
+            margin-bottom: 71px;
+            &:last-of-type {
+                margin-bottom: 29px;
+            }
+        }
+    }
+    .story-form__label {
+        padding-left: 60px;
+        &--radio {
+            padding-left: 60px;
+        }
+    }
+    .story-form__item-title {
+        padding: 0 25px;
+        width: auto;
+        &--user-contacts {
+            @include cards;
+        }
+    }
+    .story-form__legend {
+        @include cards;
+        vertical-align: baseline;
+        margin-left: 21.19%;
+    }
+}
+@media #{$desktop-widths} {
+    .story-form__item {
+        &--name {
+            width: 46.38%;
+            padding-top: 15px;
+        }
+        &--platform {
+            padding: 50px 0 13px 74px;
+            width: 46.27%;
+            box-sizing: border-box;
+        }
+        &--user-contacts {
+            display: block;
+            padding: 38px 59px 21px;
+        }
+        &--achievements {
+            padding-right: 50px;
+        }
+    }
+    .story-form {
+        padding: 0 130px;
+        justify-content: space-between;
+    }
+    .story-form__item-title {
+        padding: 0 15px;
+        width: auto;
+        &--user-contacts {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .story-form__field {
+        @include cards;
+        width: 45.73%;
+        margin-right: 8.53%;
+        &--contacts {
+            margin-bottom: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &--textarea {
+            width: 100%;
+        }
+    }
+    .story-form__checkbox-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between;
+        height: 173px;
+        justify-content: flex-start;
+    }
+    .story-form__field--contacts {
+        margin-bottom: 0;
+    }
+    .story-form__checkbox-group {
+        &:first-child {
+        }
+    }
+    .story-form__legend {
+        margin-left: 34%;
+    }
 }

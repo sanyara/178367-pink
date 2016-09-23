@@ -1,9 +1,24 @@
 .competition {
-    width: 320px;
+    min-width: 320px;
 }
 .competition__info {
     padding: 46px 20px 35px;
     margin: 0;
     line-height: 30px;
     text-align: center;
+}
+@media #{$tablet-widths} {
+    .competition__info {
+        margin: 0 auto;
+        padding: 93px 20px 35px;
+        width: 510px;
+        font-size: 18px;
+    }
+}
+@media #{$desktop-widths} {
+    .competition__info {
+        width: 761px;
+        padding: 93px 20px 35px;
+        margin-bottom: 34px;
+    }
 }

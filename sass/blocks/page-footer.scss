@@ -1,5 +1,4 @@
 .page-footer {
-    width: 320px;
     text-align: center;
 }
 .page-footer__copyright {
@@ -19,4 +18,48 @@
     line-height: 18px;
     margin-right: 10px;
     vertical-align: middle;
+}
+.page-footer--index-mobile {
+    display: none;
+}
+
+.page-footer__wrapper {
+    @include container;
+
+}
+
+
+
+@media #{$tablet-widths} {
+    .page-footer, .page-footer--index-mobile {
+        display: block;
+        padding: 35px 0;
+        outline: 1px solid red;
+    }
+    .page-footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page-footer__social {
+        width: 300px;
+    }
+    .page-footer__copyright {
+        width: 130px;
+        padding: 0;
+    }
+}
+
+
+
+
+@media #{$desktop-widths} {
+    .page-footer, .page-footer--index-mobile {
+        display: block;
+        padding:75px 0;
+    }
+    .page-footer__copyright {
+        width: 155px;
+        font-size: 18px;
+    }
 }

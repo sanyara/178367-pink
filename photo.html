@@ -7,37 +7,44 @@
     </head>
     <body>
         <header class="page-header">
-            <nav class="main-nav">
-                <ul class="main-nav__list  main-nav__list--closed">
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
-                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Фотографии</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-                </ul>
-            </nav>
-            <div class="page-header__bar  page-header__bar--closed-nav">
-                <a class="page-header__logo" href="#">
-                    <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
-                </a>
-                <button class="page-header__btn" type="button">Развернуть меню</button>
+            <div class="page-header__wrapper">
+                <div class="page-header__bar  page-header__bar--closed-nav">
+                    <a class="page-header__logo" href="#">
+                        <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+                    </a>
+                    <button class="page-header__btn" type="button">Развернуть меню</button>
+                </div>
+                <nav class="main-nav">
+                    <ul class="main-nav__list  main-nav__list--closed">
+                        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+                        <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Фотографии</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main class="main">
-            <div class="main-header main-header--promo">
+            <div class="main-header">
                 <h2 class="main-header__title">Фотографии пользователей</h2>
             </div>
             <section class="gallery">
-                <h2 class="gallery__header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+                <div class="gallery__header-wraper">
+                    <h2 class="gallery__header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+                </div>
+                <div class="gallery__list">
                 <article class="gallery__item gallery__item--best">
                     <div class="gallery__photo  gallery__photo--best">
                         <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="user photo">
                     </div>
-                    <blockquote class="gallery__comments">
-                        <cite class="gallery__author">Анна</cite>
-                        <time class="gallery__date" datetime="">(5 минут назад)</time>
-                        <p class="gallery__desc">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                        <a class="gallery__like-btn" href="#">Нравится: 215</a>
-                    </blockquote>
+                    <div class="gallery__comments-wrapper">
+                        <blockquote class="gallery__comments  gallery__comments--best">
+                            <cite class="gallery__author">Анна</cite>
+                            <time class="gallery__date" datetime="">(5 минут назад)</time>
+                            <p class="gallery__desc">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                            <a class="gallery__like-btn  gallery__like-btn--best" href="#">Нравится: 215</a>
+                        </blockquote>
+                    </div>
                 </article>
                 <article class="gallery__item">
                     <div class="gallery__photo">
@@ -105,42 +112,63 @@
                         <a class="gallery__like-btn" href="#">Нравится: 2560</a>
                     </blockquote>
                 </article>
+                </div>
             </section>
             <section class="upload">
                 <p class="upload__header">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-                <div class="upload__photo">
-                    <img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="upload photo">
-                </div>
                 <div class="upload__editor">
-                    <ul class="upload__tools">
-                        <li class="upload__tool  upload__tool--active  upload__tool--crop">Обрезка</li>
-                        <li class="upload__tool  upload__tool--fill">Заливка</li>
-                        <li class="upload__tool  upload__tool--contrast">Контраст</li>
-                    </ul>
-                    <div class="upload__range">
-                        <div class="upload__scale">
-                            <div class="upload__toggle"></div>
-                        </div>
+                    <div class="upload__photo">
+                        <img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="upload photo">
                     </div>
-                    <button class="btn btn--pink" type="button">Запостить</button>
-                    <button class="btn btn--disabled" type="button">Отмена</button>
+                    <ul class="upload__tools">
+                        <li class="upload__tool  upload__tool--active  upload__tool--crop">Обрезка
+                            <div class="upload__tool-range">
+                                <div class="upload__tool-scale">
+                                    <div class="upload__tool-toggle"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="upload__tool  upload__tool--fill">Заливка
+                            <div class="upload__tool-range">
+                                <div class="upload__tool-scale">
+                                    <div class="upload__tool-toggle"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="upload__tool  upload__tool--contrast">Контраст
+                            <div class="upload__tool-range">
+                                <div class="upload__tool-scale">
+                                    <div class="upload__tool-toggle"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="upload__range">
+                            <div class="upload__scale">
+                                <div class="upload__toggle"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn--pink" type="button">Запостить</button>
+                        <button class="btn btn--disabled" type="button">Отмена</button>
+                    </ul>
                 </div>
             </section>
         </main>
         <footer class="page-footer">
-            <div class="logo">
-                <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink logo">
-            </div>
-            <div class="page-footer__social">
-                <div class="social-links">
-                    <a class="social-link  social-link--tw" href="#">twitter</a>
-                    <a class="social-link  social-link--fb" href="#">facebook</a>
-                    <a class="social-link  social-link--yt" href="#">youtube</a>
+            <div class="page-footer__wrapper">
+                <div class="logo  logo--footer">
+                    <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink logo">
                 </div>
-            </div>
-            <div class="page-footer__copyright">
-                <p class="page-footer__copyright-text">Разработано</p>
-                <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <div class="page-footer__social">
+                    <div class="social-links">
+                        <a class="social-link  social-link--tw" href="#">twitter</a>
+                        <a class="social-link  social-link--fb" href="#">facebook</a>
+                        <a class="social-link  social-link--yt" href="#">youtube</a>
+                    </div>
+                </div>
+                <div class="page-footer__copyright">
+                    <p class="page-footer__copyright-text">Разработано</p>
+                    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                </div>
             </div>
         </footer>
     </body>

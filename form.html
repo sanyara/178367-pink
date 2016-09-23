@@ -7,59 +7,82 @@
     </head>
     <body>
         <header class="page-header">
-            <nav class="main-nav">
-                <ul class="main-nav__list  main-nav__list--closed">
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
-                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Конкурс</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-                </ul>
-            </nav>
-            <div class="page-header__bar  page-header__bar--closed-nav">
-                <a class="page-header__logo" href="#">
-                    <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
-                </a>
-                <button class="page-header__btn" type="button">open nav</button>
+            <div class="page-header__wrapper">
+                <div class="page-header__bar  page-header__bar--closed-nav">
+                    <a class="page-header__logo" href="#">
+                        <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+                    </a>
+                    <button class="page-header__btn" type="button">Развернуть меню</button>
+                </div>
+                <nav class="main-nav">
+                    <ul class="main-nav__list  main-nav__list--closed">
+                        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+                        <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Конкурс</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main class="main">
-            <div class="main-header main-header--promo">
-                <h2 class="main-header__title">Конкурс на самое безбашеное путешествие с Пинк</h2>
+            <div class="main-header">
+                <h2 class="main-header__title  main-header__title--long">Конкурс на самое безбашенное путешествие с Пинк</h2>
             </div>
             <section class="competition">
                 <p class="competition__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
                 <form class="story-form">
-                    <fieldset class="story-form__item">
-                        <label class="story-form__caption" for="surname-field">Фамилия:</label>
-                        <input class="story-form__field" type="text" name="surname" id="surname-field" value="Укажите фамилию">
-                        <label class="story-form__caption" for="firstname=field">Имя:</label>
-                        <input class="story-form__field" type="text" name="firstname" id="firstname=field" value="Введите ваше имя">
-                        <label class="story-form__caption" for="patronym-field">Отчество:</label>
-                        <input class="story-form__field" type="text" name="patronym" id="patronym-field" value="Ну и отчество тоже">
-                    </fieldset>
+                    <div class="story-form__item  story-form__item--name">
+                        <div class="story-form__field-group">
+                            <label class="story-form__caption" for="surname-field">Фамилия:</label>
+                            <input class="story-form__field" type="text" name="surname" id="surname-field" value="Укажите фамилию">
+                        </div>
+                        <div class="story-form__field-group">
+                            <label class="story-form__caption" for="firstname=field">Имя:</label>
+                            <input class="story-form__field" type="text" name="firstname" id="firstname=field" value="Введите ваше имя">
+                        </div>
+                        <div class="story-form__field-group">
+                            <label class="story-form__caption" for="patronym-field">Отчество:</label>
+                            <input class="story-form__field" type="text" name="patronym" id="patronym-field" value="Ну и отчество тоже">
+                        </div>
+                    </div>
                     <fieldset class="story-form__item  story-form__item--achievements">
-                        <h3 class="story-form__item-title">Ваши безбашенные достижения в путешествии</h3>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
-                        <label class="story-form__label" for="checkbox-1">Сделал селфи с акулой</label>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
-                        <label class="story-form__label" for="checkbox-1">Обгорел на пляже</label>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
-                        <label class="story-form__label" for="checkbox-1">Видел Чака Норриса</label>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
-                        <label class="story-form__label" for="checkbox-1">Накупил сувениров</label>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
-                        <label class="story-form__label" for="checkbox-1">Удержал башню</label>
-                        <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
-                        <label class="story-form__label" for="checkbox-1">Разгромил отель</label>
+                        <legend class="story-form__item-title">Ваши безбашенные достижения в путешествии</legend>
+                        <div class="story-form__checkbox-wrapper">
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
+                                <label class="story-form__label" for="checkbox-1">Сделал селфи с акулой</label>
+                            </div>
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
+                                <label class="story-form__label" for="checkbox-1">Обгорел на пляже</label>
+                            </div>
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
+                                <label class="story-form__label" for="checkbox-1">Видел Чака Норриса</label>
+                            </div>
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
+                                <label class="story-form__label" for="checkbox-1">Накупил сувениров</label>
+                            </div>
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
+                                <label class="story-form__label" for="checkbox-1">Удержал башню</label>
+                            </div>
+                            <div class="story-form__checkbox-group">
+                                <input class="story-form__checkbox" type="checkbox" id="checkbox-1">
+                                <label class="story-form__label" for="checkbox-1">Разгромил отель</label>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--user-contacts">
-                        <label class="story-form__caption" for="tel">Номерок телефончика</label>
-                        <input class="story-form__field" id="tel" type="tel" name="tel">
-                        <label class="story-form__caption" for="address">адресок почты</label>
-                        <input class="story-form__field" id="address" type="email" name="mail">
+                        <legend class="story-form__item-title  story-form__item-title--user-contacts">Контактная информация</legend>
+                        <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
+                        <input class="story-form__field  story-form__field--contacts" id="tel" type="tel" name="tel" value="Номер, пожалуйста">
+                        <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
+                        <input class="story-form__field  story-form__field--contacts" id="address" type="email" name="mail" value="Введите почту">
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--platform">
-                        <h3 class="story-form__item-title">С каким приложением путешествовали?</h3>
+                        <legend class="story-form__item-title">С каким приложением путешествовали?</legend>
                         <input class="story-form__radio" id="radio-1" type="radio" name="app-type-radio" checked>
                         <label class="story-form__label  story-form__label--radio" for="radio-1">Pink для iOS</label>
                         <input class="story-form__radio" id="radio-2" type="radio" name="app-type-radio">
@@ -68,7 +91,7 @@
                         <label class="story-form__label  story-form__label--radio" for="radio-3">Windows Phone</label>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--emotions">
-                        <p class="story-form__item-title  story-form__item-title--emotions">Опишите свои эмоции</p>
+                        <legend class="story-form__item-title  story-form__item-title--emotions">Опишите свои эмоции</legend>
                         <textarea class="story-form__field  story-form__field--textarea" rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--buttons">
@@ -79,19 +102,21 @@
             </section>
         </main>
         <footer class="page-footer">
-            <div class="logo">
-                <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink logo">
-            </div>
-            <div class="page-footer__social">
-                <div class="social-links">
-                    <a class="social-link  social-link--tw" href="#">twitter</a>
-                    <a class="social-link  social-link--fb" href="#">facebook</a>
-                    <a class="social-link  social-link--yt" href="#">youtube</a>
+            <div class="page-footer__wrapper">
+                <div class="logo  logo--footer">
+                    <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Pink logo">
                 </div>
-            </div>
-            <div class="page-footer__copyright">
-                <p class="page-footer__copyright-text">Разработано</p>
-                <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <div class="page-footer__social">
+                    <div class="social-links">
+                        <a class="social-link  social-link--tw" href="#">twitter</a>
+                        <a class="social-link  social-link--fb" href="#">facebook</a>
+                        <a class="social-link  social-link--yt" href="#">youtube</a>
+                    </div>
+                </div>
+                <div class="page-footer__copyright">
+                    <p class="page-footer__copyright-text">Разработано</p>
+                    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                </div>
             </div>
         </footer>
         <div class="form-popup">

@@ -1,7 +1,6 @@
 .feedback-slider {
-    padding-bottom: 32px;
-    width: 320px;
     text-align: center;
+    clear: both;
 }
 .feedback-slider__item {
     @include block-reset;
@@ -12,8 +11,77 @@
     padding: 42px 0 14px;
     font-style: normal;
 }
+.feedback-slider__author-desc {
+    display: none;
+}
 .feedback-slider__text {
     @include block-reset;
     line-height: 30px;
     padding: 0 20px;
+}
+.feedback-slider__wrapper {
+    @include container;
+}
+
+
+@media #{$tablet-widths} {
+    .feedback-slider__item {
+        position: relative;
+        padding-top: 82px;
+
+    }
+    .feedback-slider__author-wrapper {
+        @include position(auto, 0, -96px, 0);
+        display :block;
+
+
+    }
+    .feedback-slider__author {
+
+        @include font-size(20px, 30px, bold);
+        padding-bottom: 0;
+        margin-bottom: 2px;
+
+    }
+    .feedback-slider__author-desc {
+        @include block-reset;
+        display: block;
+        line-height: 30px;
+    }
+    .feedback-slider__text {
+        margin-bottom: 96px;
+        padding: 0;
+        font-size: 18px;
+    }
+
+}
+
+@media #{$desktop-widths} {
+    .feedback-slider__item {
+        position: relative;
+        padding-top: 184px;
+        background: transparent url(../img/quotes.png) 50% 33% no-repeat;
+    }
+    .feedback-slider__author-wrapper {
+        @include position(auto, 0, -98px, 0);
+
+    }
+    .feedback-slider__author {
+        @include font-size(24px, 30px, bold);
+        padding-bottom: 0;
+        margin-bottom: 2px;
+
+    }
+    .feedback-slider__author-desc {
+        @include block-reset;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .feedback-slider__text {
+        width: 685px;
+        margin: 0 auto;
+
+    
+    }
+
 }
