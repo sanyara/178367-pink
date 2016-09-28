@@ -1,13 +1,21 @@
 .page-header {
-    width: 320px;
+    min-width: 320px;
     color: #fff;
 }
+.page-header__wrapper {
+    position: relative;
+}
 .page-header__bar {
+    position: absolute;
+    width: 100%;
     padding: 21px 20px 18px;
     background-color:  $primary-color;
-    border: 1px solid #485461;
+    background-color: transparent;
+
+    border: 1px solid black;
     border-left-style: none;
     border-right-style: none;
+    box-sizing: border-box;
 }
 .page-header__logo {
     @include cards;
@@ -17,6 +25,7 @@
     @include btn-reset;
     @include size(23px, 23px);
     position: relative;
+    float: right;
     text-indent: -9999px;
     background-color: transparent;
     &::before, &::after {
@@ -29,5 +38,52 @@
     }
     &::after {
         transform: rotate(-45deg);
+    }
+}
+
+
+@media #{$tablet-widths} {
+    .page-header__bar {
+        padding: 43px 40px 36px;
+
+    }
+    .page-header__logo {
+        @include cards;
+        position: relative;
+        padding-left: 70px;
+        img {
+            visibility: hidden;
+        }
+        &::before {
+            @include position-pseudo(-16px, -2px);
+            @include size(146px, 40px);
+            background: rgba(255, 255, 255, 0.2) url("../img/logo-pink-blue-mobile.svg");
+        }
+    }
+}
+@media #{$desktop-widths} {
+    .page-header__wrapper {
+        padding: 0 130px;
+        margin: 0 auto;
+        width: 940px;
+    }
+    .page-header {
+        width: 100%;
+        position: absolute;
+        @include clearfix;
+        min-height: 110px;
+        background-color: rgba(0, 0, 0, 0.1);
+
+    }
+    .page-header__bar {
+        float: left;
+        padding: 44px 0 36px;
+        width: 150px;
+
+        background-color: transparent;
+        border:none;
+    }
+    .page-header__btn {
+        display: none;
     }
 }

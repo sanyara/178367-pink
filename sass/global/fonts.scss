@@ -40,3 +40,17 @@ h3 {
     font-weight: bold;
     color: $primary-color;
 }
+
+@media #{$tablet-widths} {
+    h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+}
+@media #{$desktop-widths} {
+    h2 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}

@@ -25,3 +25,40 @@
         cursor: default;
     }
 }
+@media #{$tablet-widths} {
+    .btn {
+        padding: 14px 5px 17px;
+        margin-left: 0;
+        margin-bottom: 13px;
+        width: 282px;
+        &--pink {
+            margin-top: 63px;
+            margin-bottom: 25px;
+            width: 260px;
+        }
+        &--disabled {
+            width: 260px;
+        }
+    }
+}
+@media #{$desktop-widths} {
+    .btn {
+        font-size: 21px;
+        margin-bottom: 35px;
+        &--pink {
+            @include cards;
+            outline: 1px solid green;
+            margin-top: 142px;
+            margin-bottom: 25px;
+            margin-right: 40px;
+            width: 185px;
+            font-size: 18px;
+        }
+        &--disabled {
+            @include cards;
+            width: 185px;
+            margin-top: 142px;
+            font-size: 18px;
+        }
+    }
+}

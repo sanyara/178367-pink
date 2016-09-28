@@ -5,3 +5,10 @@
         @include cards;
     }
 }
+
+@media #{$tablet-widths}  {
+    .logo--footer {
+        padding: 0;
+        width: 150px;
+    }
+}

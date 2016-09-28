@@ -1,5 +1,5 @@
 .slider-controls {
-    padding: 38px 47px;
+    padding: 38px 47px 25px;
     font-size: 0;
 }
 .slider-controls__radio {
@@ -13,7 +13,48 @@
         background-color: transparent;
         box-shadow: 0 0 0 3px $primary-color;
     }
-    &:last-child {
+    &:last-of-type {
         margin-right: 0;
+    }
+}
+.slider-controls__btn {
+    display: none;
+}
+@media #{$tablet-widths} {
+    .slider-controls {
+        padding: 38px 47px 5px;
+        &--price {
+            display: none;
+        }
+    }
+}
+@media #{$desktop-widths} {
+    .slider-controls {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 138px;
+
+
+    }
+    .slider-controls__radio {
+        display: none;
+    }
+    .slider-controls__btn {
+        @include position(-57px, 14px, auto, auto);
+        display: block;
+        width: 31px;
+        height: 31px;
+        outline: none;
+        border: 2px solid #bec2c7;
+        border-top: none;
+        border-right: none;
+        background: none;
+        transform: rotate(45deg);
+        cursor: pointer;
+        &--next {
+            @include position(-57px, auto, auto, 14px);
+            transform: rotate(-135deg);
+        }
     }
 }

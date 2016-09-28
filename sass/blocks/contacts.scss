@@ -1,25 +1,109 @@
 .contacts {
     padding: 43px 0 0;
-    width: 320px;
+
     text-align: center;
+}
+.contacts__wrapper {
+    @include container;
 }
 .contacts__header {
     @include block-reset;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
+
 }
 .contacts__item {
-    padding: 14px;
+    padding: 0 10px;
+    margin-bottom: 16px;
+    &:nth-of-type(2) {
+        margin-bottom: 21px;
+    }
 }
 .contacts__title {
-    margin-bottom: 6px;
+    @include block-reset;
+    line-height: 30px;
+
 }
 .contacts__info {
-    @include font-size(24px, 24px, lighter);
+    @include font-size(24px, 30px, lighter);
+    display: block;
     text-decoration: none;
     color: $secondary-color;
 }
 .contacts__map {
     @include size(320px, 200px);
+    width: 100%;
     margin-top: 33px;
     background: #fff url('../img/bg-map-mobile@1x.png') no-repeat 50% 50%;
+
+}
+
+
+
+@media #{$tablet-widths} {
+    .contacts__wrapper {
+    
+        @include clearfix;
+    }
+    .contacts__header  {
+        width: 485px;
+        margin: 0 auto;
+        margin-bottom: 43px;
+
+    }
+    .contacts__item {
+
+        width: 280px;
+        margin-right: 0;
+        margin-bottom: 44px;
+
+
+        &--left {
+            float: left;
+        }
+        &--right {
+            float: right;
+        }
+        &--center {
+            display: block;
+            margin: 0 auto;
+            clear: both;
+        }
+    }
+    .contacts__map {
+        @include size(700px, 378px);
+        width: 100%;
+        margin-top: 29px;
+        background: #fff url('../img/bg-map-tablet@1x.png') no-repeat 50% 50%;
+    }
+
+}
+
+
+
+@media #{$desktop-widths} {
+    .contacts {
+        padding-top: 64px;
+    }
+    .contacts__header {
+
+        margin-bottom: 52px;
+    }
+    .contacts__item {
+        width: 290px;
+        &--center {
+            float: left;
+            clear: none;
+        }
+
+    }
+    .contacts__title {
+        margin-bottom: 20px;
+
+    }
+    .contacts__map {
+        @include size(1200px, 501px);
+        width: 100%;
+        margin-top: 5px;
+        background: #fff url('../img/bg-map-desktop@1x.png') no-repeat 50% 50%;
+    }
 }
