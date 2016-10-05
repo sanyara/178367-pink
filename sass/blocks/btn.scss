@@ -12,6 +12,7 @@
     border-radius: 35px;
     &--pink {
         width: 280px;
+        margin: 0 5.62%;
         margin-bottom: 13px;
         border-color: $secondary-color;
         color: $secondary-color;
@@ -19,20 +20,48 @@
     }
     &--disabled {
         width: 280px;
+        margin: 0 5.62%;
         border-color: #dddfe0;
         color: #dddfe0;
         background-color: #f2f2f2;
         cursor: default;
     }
 }
+.btn:hover {
+    background-color: #fff;
+    color: $secondary-color;
+
+}
+
+.btn:active {
+    color: rgba($secondary-color, 0.4);
+}
+.btn--pink:hover {
+    background-color: $secondary-color;
+    color: #fff;
+}
+.btn--pink:active {
+    background-color: $secondary-color;
+    color: rgba(255, 255, 255, 0.3);
+}
+.btn--disabled:hover {
+    border-color: #bfc3c6;
+    background-color: #f2f2f2;
+    color: #b5b9be;
+}
+.btn--disabled:active {
+    border-color: #b5b9be;
+    background-color: #b5b9be;
+    color: #cbced2;
+}
 @media #{$tablet-widths} {
     .btn {
         padding: 14px 5px 17px;
         margin-left: 0;
-        margin-bottom: 13px;
+        margin-bottom: 37px;
         width: 282px;
         &--pink {
-            margin-top: 63px;
+            margin-top: 68px;
             margin-bottom: 25px;
             width: 260px;
         }
@@ -44,21 +73,21 @@
 @media #{$desktop-widths} {
     .btn {
         font-size: 21px;
-        margin-bottom: 35px;
+        margin-bottom: 60px;
         &--pink {
-            @include cards;
-            outline: 1px solid green;
-            margin-top: 142px;
+            margin: 0;
             margin-bottom: 25px;
-            margin-right: 40px;
+            margin-top: 157px;
+            margin-right: 37px;
             width: 185px;
             font-size: 18px;
         }
         &--disabled {
-            @include cards;
+            margin: 0;
+            margin-top: 157px;
             width: 185px;
-            margin-top: 142px;
             font-size: 18px;
+            align-self: flex-start;
         }
     }
 }

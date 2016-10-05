@@ -1,10 +1,31 @@
 .main-nav {
     background-color: $primary-color;
-    display: none;
+
+}
+.main-nav__header {
+    position: relative;
+    width: 100%;
+    padding: 21px 20px 25px;
+    background-color:  $primary-color;
+    border: 1px solid black;
+    border-left-style: none;
+    border-right-style: none;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px #090c10;
+}
+.main-nav--closed .main-nav__header {
+    position: absolute;
+    padding: 21px 20px 22px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+    box-shadow: none;
 }
 .main-nav__list {
     @include block-reset;
     list-style: none;
+}
+.main-nav--closed .main-nav__list {
+    display: none;
 }
 .main-nav__link {
     @include font-size(18px, 32px, bold, uppercase);
@@ -18,28 +39,211 @@
     border-left-style: none;
     border-right-style: none;
 }
+.main-nav__link:hover {
+    color: $secondary-color;
+}
+.main-nav__link:active {
+    color: rgba($secondary-color, 0.3);
+}
+.main-nav__btn {
+    @include btn-reset;
+    @include size(23px, 23px);
+    @include position(20px, auto, auto, 20px);
+    font-size: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-nav--opened {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.main-nav--opened .main-nav__btn {
+    &::before, &::after {
+        @include position-pseudo(50%, 50%);
+        @include size(30px, 5px);
+        margin-left: -15px;
+        margin-top: -2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+.main-nav--opened .main-nav__btn:hover {
+    &::before {
+        background-color: $secondary-color;
+    }
+    &::after {
+        background-color: $secondary-color;
+    }
+}
+.main-nav--opened .main-nav__btn:active {
+    &::before {
+        background-color: rgba($secondary-color, 0.3);
+    }
+    &::after {
+        background-color: rgba($secondary-color, 0.3);
+    }
+}
+.main-nav--closed .main-nav__btn {
+    @include size(50px, 30px);
+    &:before {
+        @include position-pseudo(1px, auto, auto, 0);
+        @include size(50px, 4px);
+        background-color: #fff;
+        box-shadow: 0 10px 0 0 #fff,
+                    0 20px 0 0 #fff;
+    }
+}
+.main-nav--closed .main-nav__btn:hover::before {
+    background-color: $secondary-color;
+    box-shadow: 0 10px 0 0 $secondary-color,
+                0 20px 0 0 $secondary-color;
+}
+.main-nav--closed .main-nav__btn:active::before {
+    background-color: rgba($secondary-color, 0.3);
+    box-shadow: 0 10px 0 0  rgba($secondary-color, 0.3),
+                0 20px 0 0  rgba($secondary-color, 0.3);
+}
+.main-nav__logo {
+    svg {
+        display: none;
+    }
+}
+.main-nav__logo:hover .main-nav__logo-svg-group path {
+    fill: $secondary-color;
+}
+.main-nav__logo:active .main-nav__logo-svg-group path {
+    fill: #fff;
+    opacity: 0.3;
+}
+.main-nav__logo .main-nav__logo-mobile {
+    display: block;
+}
+
+.main-nav--nojs .main-nav__btn {
+    display: none;
+}
+.main-nav--nojs .main-nav__list {
+    display: block;
+}
+.main-nav--nojs .main-nav__header {
+    position: static;
+}
+
+@media #{$tablet-widths} {
+    .main-nav__header {
+        padding: 26px 40px 42px;
+    }
+    .main-nav--closed .main-nav__header {
+        padding: 26px 40px 43px;
+    }
+    .main-nav--closed .main-nav__list {
+        display: none;
+    }
+    .main-nav__btn {
+    @include position(44px, auto, auto, 40px);
+    }
+
+
+
+    .main-nav--closed .main-nav__btn {
+        top: 43px;
+    }
+    .main-nav__logo .main-nav__logo-mobile {
+        display: none;
+    }
+    .main-nav__logo .main-nav__logo-tablet {
+        display: block;
+
+    }
+    .main-nav__logo-tablet:hover {
+        fill:red;
+    }
+    .main-nav__logo {
+        @include cards;
+        position: relative;
+    /*    padding-left: 70px;
+        img {
+            visibility: hidden;
+        }
+        &::before {
+            @include position-pseudo(-17px, 0px);
+            @include size(146px, 40px);
+            background: rgba(255, 255, 255, 0.2) url("../img/logo-pink-blue-mobile.svg");
+        }   */
+    }
+}
 
 @media #{$desktop-widths} {
     .main-nav {
-        display: block;
-        float: right;
-        padding-top: 38px;
-        max-width: 790px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
         background-color: transparent;
-    }
-    .main-nav__list {
-        font-size: 0;
 
     }
+    .main-nav__header, .main-nav--closed .main-nav__header {
+        position: static;
+        padding: 26px 0px 35px;
+        width: 150px;
+        background: none;
+    }
+
+    .main-nav__logo .main-nav__logo-tablet {
+        display: none;
+    }
+    .main-nav__logo .main-nav__logo-desktop {
+        display: block;
+    }
+    .main-nav__list, .main-nav--closed .main-nav__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 65.95%;
+    }
     .main-nav__item {
-        @include cards;
-        margin-left: 80px;
+        padding-top: 5px;
 
     }
     .main-nav__link {
+        position: relative;
         padding: 0;
         text-transform: none;
         font-weight: normal;
         border: none;
+    }
+    .main-nav__link:hover {
+        color: $secondary-color;
+    }
+    .main-nav__link:active {
+        color: #fff;
+        opacity: 0.3;
+    }
+    .main-nav__link--active {
+        &::after {
+            @include position-pseudo(auto, 0, -4px, 0);
+            @include size(100%, 2px);
+            background-color: #fff;
+        }
+    }
+    .main-nav__link--active:hover {
+        &::after {
+            background-color: $secondary-color;
+        }
+    }
+    .main-nav__link--active:active {
+        opacity: 0.3;
+        &::after {
+            background-color: #fff;
+            opacity: 0.3;
+        }
+    }
+    .main-nav__btn {
+        display: none;
     }
 }

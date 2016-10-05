@@ -1,4 +1,8 @@
 .page-footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 .page-footer__copyright {
@@ -9,8 +13,9 @@
     @include cards;
     @include size(27px, 35px);
     vertical-align: middle;
-    text-indent: -9999px;
-    background: transparent url("../img/logo-htmlacademy.svg") no-repeat 50% bottom;
+    font-size: 0;
+/*    background: transparent url("../img/logo-htmlacademy.svg") no-repeat 50% bottom;
+*/
 }
 .page-footer__copyright-text {
     @include cards;
@@ -19,34 +24,65 @@
     margin-right: 10px;
     vertical-align: middle;
 }
+.page-footer__htmlacademy-logo {
+    fill: $secondary-color;
+}
+.page-footer__copyright-link:hover .page-footer__htmlacademy-logo {
+    fill: $primary-color;
+}
+.page-footer__copyright-link:active .page-footer__htmlacademy-logo {
+    fill: #bec2c7;
+}
 .page-footer--index-mobile {
     display: none;
 }
 
 .page-footer__wrapper {
-    @include container;
+
 
 }
-
-
+.page-footer__logo-desktop {
+    display: none;
+}
+.page-footer__logo-svg-group path {
+    fill: $primary-color;
+}
+.page-footer__logo-svg-glasses path {
+    fill: $secondary-color;
+}
+.logo--footer:hover .page-footer__logo-svg-group path {
+    fill: $secondary-color;
+}
+.logo--footer:active .page-footer__logo-svg-group path {
+    fill: $primary-color;
+    opacity: 0.3;
+}
+.logo--footer:active .page-footer__logo-svg-glasses path {
+    opacity: 0.3;
+}
 
 @media #{$tablet-widths} {
-    .page-footer, .page-footer--index-mobile {
-        display: block;
-        padding: 35px 0;
-        outline: 1px solid red;
+
+    .page-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 39px 5.62% 31px;
     }
-    .page-footer__wrapper {
+    .Apage-footer__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .page-footer__social {
-        width: 300px;
+
     }
     .page-footer__copyright {
-        width: 130px;
+        width: 150px;
         padding: 0;
+        padding-left: 20px;
+        box-sizing:border-box;
     }
 }
 
@@ -54,12 +90,22 @@
 
 
 @media #{$desktop-widths} {
-    .page-footer, .page-footer--index-mobile {
-        display: block;
-        padding:75px 0;
+    .page-footer {
+        padding:74px 10.83% 76px;
     }
     .page-footer__copyright {
-        width: 155px;
+        width: 150px;
+        padding: 0;
+        font-size: 0;
+    }
+    .page-footer__copyright-text {
+        margin-right: 10px;
         font-size: 18px;
+    }
+    .page-footer__logo-tablet {
+        display: none;
+    }
+    .page-footer__logo-desktop {
+        display: block;
     }
 }

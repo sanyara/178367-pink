@@ -7,12 +7,18 @@
 .gallery__header {
     @include block-reset;
     @include font-size(14px, 30px, normal);
-    padding: 46px 35px 50px;
+    padding: 46px 35px 48px;
     text-align: center;
 }
+.gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
 .gallery__item {
-    padding: 0 20px;
-    margin: 0 auto;
+    padding: 0 6.4%;
+    width: 100%;
 
     margin-bottom: 20px;
     &:last-child {
@@ -20,11 +26,12 @@
     }
     &--best {
         padding: 0;
-        width: auto;
+        width: 100%;
     }
 }
 .gallery__photo {
     position: relative;
+    display: block;
 
     img {
         display: block;
@@ -44,32 +51,35 @@
 
 .gallery__comments-wrapper {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 6.4%;
 }
 .gallery__comments {
+    display: flex;
     margin: 0 auto;
-    padding: 17px 17px 21px;
+    padding: 18px 17px 20px;
     min-width: 246px;
+    flex-wrap: wrap;
     background-color: #f2f2f2;
 
 }
 .gallery__author {
-    @include cards;
+    margin-right: 3px;
     font-weight: bold;
     font-style: normal;
 }
 .gallery__date {
-    @include cards;
     @include font-size(12px, 24px, lighter, uppercase);
 }
 .gallery__desc {
     @include block-reset;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 .gallery__like-btn {
     position: relative;
     display: block;
-    padding-left: 33px;
+    padding-left: 32px;
+    width: 88.2%;
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
@@ -83,6 +93,22 @@
 }
 
 @media #{$tablet-widths} {
+    .gallery__photo {
+
+        &--best {
+
+        }
+        &--best::before {
+            @include position-pseudo(57px, auto, auto, 40px);
+            @include size(140px, 36px);
+            @include font-size(12px, 36px, bold, uppercase);
+            content: "Панорама дня";
+            background-color: $secondary-color;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
     .gallery__header {
         font-size: 18px;
         padding: 92px 70px 76px;
@@ -90,7 +116,7 @@
 
     .gallery__comments-wrapper {
         margin: 0;
-        padding: 0;
+        padding: 0 5.71%;
     }
 
     .gallery__comments {
@@ -99,11 +125,11 @@
         padding: 24px 28px 50px;
         box-sizing: border-box;
         min-height: 155px;
+        align-content: flex-start;
         &--best {
             position: relative;
             margin: 0 auto;
-            padding: 24px 28px 16px;
-            width: 88.57%;
+            padding: 24px 28px 14px;
             min-height: 100px;
 
 
@@ -111,7 +137,6 @@
     }
     .gallery__like-btn {
         @include position(auto, 0, 23px, 10px);
-        outline: 1px solid red;
         width: 100%;
         padding-left: 28px;
         padding-right: 53px;
@@ -163,20 +188,38 @@
 
 
 @media #{$desktop-widths} {
+    .gallery__photo {
+
+        &--best {
+
+        }
+        &--best::before {
+            @include position-pseudo(54px, auto, auto, 130px);
+            @include size(140px, 36px);
+            @include font-size(12px, 36px, bold, uppercase);
+            content: "Панорама дня";
+            background-color: $secondary-color;
+            color: #fff;
+            text-align: center;
+        }
+    }
     .gallery__header {
         margin: 0 auto;
         padding: 92px 70px 88px;
         width: 605px;
         font-size: 18px;
-        outline: 1px solid red;
     }
-
+    .gallery__comments-wrapper {
+        margin: 0;
+        padding: 0 10.8%;
+    }
     .gallery__comments {
+        padding: 24px 28px 50px;
         &--best {
             position: relative;
             margin: 0 auto;
-            padding: 24px 28px 16px;
-            width: 78.3%;
+            padding: 24px 28px 14px;
+            min-height: 0;
         }
     }
 
@@ -194,6 +237,15 @@
             width: 100%;
             background-color: transparent;
         }
+    }
+    .gallery__like-btn {
+        &--best {
+            padding-right: 38px;
+        }
+        &--best::before {
+            @include position-pseudo(4px, auto, auto, 6px);
+        }
+
     }
 
 }

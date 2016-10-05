@@ -4,62 +4,34 @@
 }
 .page-header__wrapper {
     position: relative;
+    &--opened {
+        padding-top: 250px;
+    }
 }
 .page-header__bar {
-    position: absolute;
+
     width: 100%;
-    padding: 21px 20px 18px;
+    padding: 20px 20px 20px;
     background-color:  $primary-color;
-    background-color: transparent;
 
     border: 1px solid black;
     border-left-style: none;
     border-right-style: none;
     box-sizing: border-box;
+
 }
-.page-header__logo {
-    @include cards;
-}
-.page-header__btn {
-    @include cards;
-    @include btn-reset;
-    @include size(23px, 23px);
-    position: relative;
-    float: right;
-    text-indent: -9999px;
-    background-color: transparent;
-    &::before, &::after {
-        @include position-pseudo(50%, 50%);
-        @include size(30px, 5px);
-        margin-left: -15px;
-        margin-top: -2px;
-        background-color: #fff;
-        transform: rotate(45deg);
-    }
-    &::after {
-        transform: rotate(-45deg);
-    }
-}
+
+
 
 
 @media #{$tablet-widths} {
     .page-header__bar {
-        padding: 43px 40px 36px;
+
+        padding: 43px 40px 35px;
 
     }
-    .page-header__logo {
-        @include cards;
-        position: relative;
-        padding-left: 70px;
-        img {
-            visibility: hidden;
-        }
-        &::before {
-            @include position-pseudo(-16px, -2px);
-            @include size(146px, 40px);
-            background: rgba(255, 255, 255, 0.2) url("../img/logo-pink-blue-mobile.svg");
-        }
-    }
+
+
 }
 @media #{$desktop-widths} {
     .page-header__wrapper {
@@ -72,7 +44,7 @@
         position: absolute;
         @include clearfix;
         min-height: 110px;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
 
     }
     .page-header__bar {
@@ -83,7 +55,5 @@
         background-color: transparent;
         border:none;
     }
-    .page-header__btn {
-        display: none;
-    }
+
 }

@@ -1,15 +1,15 @@
 .social-link {
-    @include cards;
+
     @include size(51px, 51px);
     position: relative;
-    margin-right: 12px;
+
     text-decoration: none;
     border-radius: 50%;
     box-shadow: inset 0 0 0 3px #e9ebec;
-    text-indent: -9999px;
-    font-size: 14px;
+    font-size: 0;
+
     &:last-child {
-        
+
     }
     &--tw {
         background: transparent url("../img/icon-twitter.svg") no-repeat 50% 50%;
@@ -20,4 +20,14 @@
     &--yt {
         background: transparent url("../img/icon-youtube.svg") no-repeat 50% 50%;
     }
+}
+.social-link:hover {
+    box-shadow: inset 0 0 0 3px $primary-color;
+}
+.social-link:active {
+    box-shadow: inset 0 0 0 3px #e9ebec;
+    opacity: 0.3;
+}
+@media #{$tablet-widths} {
+
 }

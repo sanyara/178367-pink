@@ -1,13 +1,18 @@
 .story-form {
+    display: flex;
     margin: 0 auto;
     min-width: 320px;
+    flex-direction: column;
 }
 .story-form__item {
     @include block-reset;
     padding: 0 20px;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     border: none;
+    box-sizing: border-box;
     &--achievements {
+        padding-bottom: 2px;
+        margin-bottom: 29px;
         background-color: #f2f2f2;
     }
     &--user-contacts {
@@ -15,13 +20,14 @@
     }
     &--platform {
         margin-bottom: 20px;
+        padding-bottom: 2px;
         background-color: #f2f2f2;
     }
     &--buttons {
         margin-bottom: 15px;
     }
     &--emotions {
-        margin-bottom: 25px;
+        margin-bottom: 26px;
     }
 }
 .story-form__caption {
@@ -42,21 +48,30 @@
     border: 1px solid #e5e5e5;
     box-sizing: border-box;
     &--textarea {
-        padding: 14px 21px 32px;
+        padding: 15px 19px 32px;
     }
     &--emotions {
         padding: 36px 20px 18px;
     }
 }
+.story-form__field:hover  {
+    border: 1px solid $primary-color;
+}
+.story-form__field:focus  {
+    border: 1px solid $secondary-color;
+}
 .story-form__item-title {
     @include block-reset;
     @include cards;
     @include font-size(14px, 18px, normal, uppercase);
-    padding: 36px 20px 42px;
+    padding: 36px 20px 43px;
     color: $secondary-color;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    &--platform {
+        padding-bottom: 39px;
+    }
     &--user-contacts {
         display: none;
     }
@@ -75,19 +90,42 @@
         @include position-pseudo(-4px, 0);
         @include size(39px, 39px);
         background-color: #fff;
-        background: #fff url("../img/icon-yes.svg") no-repeat 50% 50%;
+        background: #fff;
         box-shadow: inset 0 0 0 2px #e5e5e5;
+        cursor: pointer;
     }
     &--radio {
         margin-bottom: 45px;
     }
     &--radio::before {
         border-radius: 50%;
-        background: $secondary-color;
+        background: #fff;
         box-shadow: inset 0 0 0 2px #e5e5e5,
                     inset 0 0 0 12px #fff;
     }
+
 }
+.story-form__label--radio:hover::before {
+    box-shadow: inset 0 0 0 2px $primary-color,
+                inset 0 0 0 12px #fff;
+}
+.story-form__label--radio:active::before {
+    box-shadow: inset 0 0 0 2px $secondary-color,
+                inset 0 0 0 12px #fff;
+}
+.story-form__radio:checked + .story-form__label--radio::before {
+    background: $secondary-color;
+}
+.story-form__checkbox:checked + .story-form__label::after {
+    @include position-pseudo(7px, 9px, auto, auto);
+    @include size(19px, 8px);
+    border: 3px solid $secondary-color;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+
+}
+
 .story-form__checkbox, .story-form__radio {
     display: none;
 }
@@ -95,6 +133,15 @@
     line-height: 30px;
     text-transform: uppercase;
     text-align: center;
+    &:first-letter {
+        color: $secondary-color;
+    }
+}
+.story-form__checkbox-group .story-form__label:hover::before {
+    box-shadow: inset 0 0 0 2px $primary-color;
+}
+.story-form__checkbox-group .story-form__label:active::before {
+    box-shadow: inset 0 0 0 2px $secondary-color;
 }
 @media #{$tablet-widths} {
     .story-form__field-group {
@@ -116,6 +163,7 @@
         flex-grow: 1;
         margin-bottom: 0;
         &--textarea {
+
             padding-bottom: 28px;
         }
     }
@@ -130,7 +178,7 @@
         padding: 0;
         margin-bottom: 57px;
         font-size: 0;
-        border: 1px solid black;
+        border: 1px solid #e5e5e5;
         border-radius: 2px;
         &:first-child {
             margin-bottom: 35px;
@@ -140,46 +188,63 @@
             border: none;
         }
         &--achievements {
-            padding: 49px 60px 0;
+            padding: 49px 58px 0;
             margin-bottom: 60px;
             width: 100%;
             order: -2;
+            background-color: transparent;
         }
         &--platform {
             padding: 50px 0 13px 59px;
             width: 100%;
+            margin-bottom: 59px;
             order: -4;
+            background-color: transparent;
         }
         &--user-contacts {
-            padding: 37px 60px;
+            padding: 37px 58px;
             width: 100%;
             order: -3;
         }
         &--emotions {
-            padding: 37px 60px 52px;
+            padding: 37px 60px 49px;
             margin-bottom: 67px;
             width: 100%;
 
         }
         &--buttons {
-            display: block;
+            margin-bottom: 53px;
             width: 100%;
-            text-align: justify;
             font-size: 14px;
+            border: none;
         }
         &--emotions {
             order: -2;
         }
+    }
+    .story-form__buttons-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
     }
     .story-form__caption--contacts {
         display: none;
     }
     .story-form__field {
         &--contacts {
+            position: relative;
             margin-bottom: 71px;
+            padding-right: 83px;
+            background: url("../img/icon-phone.svg") no-repeat right 22px center,
+                        linear-gradient(to left, #e5e5e5 62px, #fff 62px);
             &:last-of-type {
                 margin-bottom: 29px;
             }
+        }
+        &--mail {
+            background: url("../img/icon-mail.svg") no-repeat right 22px center,
+                        linear-gradient(to left, #e5e5e5 62px, #fff 62px);
         }
     }
     .story-form__label {
@@ -196,9 +261,7 @@
         }
     }
     .story-form__legend {
-        @include cards;
-        vertical-align: baseline;
-        margin-left: 21.19%;
+
     }
 }
 @media #{$desktop-widths} {
@@ -214,13 +277,22 @@
         }
         &--user-contacts {
             display: block;
-            padding: 38px 59px 21px;
+            padding: 35px 59px 24px;
         }
         &--achievements {
             padding-right: 50px;
+            margin-bottom: 57px;
+        }
+        &--emotions {
+            padding-top: 35px;
+            padding-bottom: 43px;
+        }
+        &--buttons {
+            margin-bottom: 0;
         }
     }
     .story-form {
+        flex-direction: row;
         padding: 0 130px;
         justify-content: space-between;
     }
@@ -245,6 +317,7 @@
         }
         &--textarea {
             width: 100%;
+            height: 127px;
         }
     }
     .story-form__checkbox-wrapper {
@@ -265,4 +338,8 @@
     .story-form__legend {
         margin-left: 34%;
     }
+    .story-form__buttons-wrapper {
+        margin-bottom: 0;
+    }
+
 }

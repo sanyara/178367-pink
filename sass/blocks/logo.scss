@@ -4,10 +4,13 @@
     img {
         @include cards;
     }
+    
 }
 
 @media #{$tablet-widths}  {
     .logo--footer {
+        position: relative;
+        top: -7px;
         padding: 0;
         width: 150px;
     }

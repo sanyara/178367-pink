@@ -1,0 +1,55 @@
+.research {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+    .research {
+        display: block;
+        margin: 0;
+        padding: 96px 5.7% 27px 50%;
+      /*  padding: 96px 40px 27px 349px; */
+        width: 100%;
+        box-sizing: border-box;
+        background: #fff url("../img/timer24.png") no-repeat 9% bottom;
+    }
+    .research__title {
+        @include font-size(30px, 36px, bold);
+        margin: 0;
+        margin-bottom: 10px;
+        width: 200px;
+        color: #000;
+
+    }
+
+    .research__text {
+        margin: 0;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+    .research__link {
+        color: $secondary-color;
+    }
+}
+@media #{$desktop-widths} {
+      .research {
+          width: 100%;
+          margin: 0;
+          padding: 150px 10.83% 114px 41.3%;
+          box-sizing: border-box;
+        /*  padding: 150px 40px 114px 496px;*/
+          background: #f2f2f2 url("../img/timer24-desktop.png") no-repeat 14.5% 60px;
+      }
+      .research__title {
+          width: 570px;
+          margin-bottom: 21px;
+
+      }
+      .research__text {
+          width: 525px;
+          margin-bottom: 30px;
+          @include font-size(18px, 30px);
+      }
+      .research__link {
+          @include font-size(18px, 30px);
+      }
+}
