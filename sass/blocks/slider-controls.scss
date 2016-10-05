@@ -1,6 +1,9 @@
 .slider-controls {
-    padding: 38px 47px 25px;
+    padding: 35px 47px 28px;
     font-size: 0;
+    &--price {
+        padding: 38px 47px 25px;
+    }
 }
 .slider-controls__radio {
     @include cards;
@@ -9,6 +12,7 @@
     background-color: #bec2c7;
     border-radius: 50%;
     font-size: 14px;
+    cursor: pointer;
     &--active {
         background-color: transparent;
         box-shadow: 0 0 0 3px $primary-color;
@@ -17,12 +21,18 @@
         margin-right: 0;
     }
 }
+.slider-controls__radio:not(.slider-controls__radio--active):hover {
+    background-color: #7e868f;
+}
+.slider-controls__radio:not(.slider-controls__radio--active):active {
+    background-color: #e9ebec;
+}
 .slider-controls__btn {
     display: none;
 }
 @media #{$tablet-widths} {
     .slider-controls {
-        padding: 38px 47px 5px;
+        padding: 37px 47px 5px;
         &--price {
             display: none;
         }
@@ -33,7 +43,7 @@
         position: relative;
         width: 100%;
         padding: 0;
-        margin-bottom: 138px;
+        margin-bottom: 0;
 
 
     }
@@ -41,7 +51,8 @@
         display: none;
     }
     .slider-controls__btn {
-        @include position(-57px, 14px, auto, auto);
+        outline: 1px solid red;
+        @include position(-195px, 135px, auto, auto);
         display: block;
         width: 31px;
         height: 31px;
@@ -53,8 +64,18 @@
         transform: rotate(45deg);
         cursor: pointer;
         &--next {
-            @include position(-57px, auto, auto, 14px);
+            @include position(-195px, auto, auto, 135px);
             transform: rotate(-135deg);
         }
+    }
+    .slider-controls__btn:hover {
+        border: 2px solid #7e868f;
+        border-top: none;
+        border-right: none;
+    }
+    .slider-controls__btn:active {
+        border: 2px solid #e9ebec;
+        border-top: none;
+        border-right: none;
     }
 }

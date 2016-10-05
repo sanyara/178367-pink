@@ -1,8 +1,9 @@
 $primary-color: #283645;
 $secondary-color: #d22856;
-
+$mobile-widths-only: (max-width: 716px);
 $tablet-widths: (min-width: 717px);
 $desktop-widths: (min-width: 1217px);
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
 
 @mixin clearfix() {
   &::after {
