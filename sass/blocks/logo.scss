@@ -4,9 +4,7 @@
     img {
         @include cards;
     }
-    
 }
-
 @media #{$tablet-widths}  {
     .logo--footer {
         position: relative;

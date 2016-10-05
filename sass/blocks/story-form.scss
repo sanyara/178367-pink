@@ -103,7 +103,6 @@
         box-shadow: inset 0 0 0 2px #e5e5e5,
                     inset 0 0 0 12px #fff;
     }
-
 }
 .story-form__label--radio:hover::before {
     box-shadow: inset 0 0 0 2px $primary-color,
@@ -123,7 +122,6 @@
     border-right: none;
     border-top: none;
     transform: rotate(-45deg);
-
 }
 
 .story-form__checkbox, .story-form__radio {
@@ -163,7 +161,6 @@
         flex-grow: 1;
         margin-bottom: 0;
         &--textarea {
-
             padding-bottom: 28px;
         }
     }
@@ -202,7 +199,8 @@
             background-color: transparent;
         }
         &--user-contacts {
-            padding: 37px 58px;
+            position: relative;
+            padding: 36px 58px 27px;
             width: 100%;
             order: -3;
         }
@@ -210,7 +208,6 @@
             padding: 37px 60px 49px;
             margin-bottom: 67px;
             width: 100%;
-
         }
         &--buttons {
             margin-bottom: 53px;
@@ -226,20 +223,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+    }
+    .story-form__user-contacts-wrapper {
+            display: flex;
+            flex-direction: column;
     }
     .story-form__caption--contacts {
-        display: none;
+            padding-left: 20px;
+            &:first-of-type {
+                order: 0;
+                margin-bottom: 30px;
+            }
+            &:last-of-type {
+                order: 2;
+            }
     }
     .story-form__field {
         &--contacts {
             position: relative;
-            margin-bottom: 71px;
+            margin-bottom: 10px;
             padding-right: 83px;
+            order: -1;
             background: url("../img/icon-phone.svg") no-repeat right 22px center,
                         linear-gradient(to left, #e5e5e5 62px, #fff 62px);
             &:last-of-type {
-                margin-bottom: 29px;
+                order: 1;
             }
         }
         &--mail {
@@ -260,9 +268,6 @@
             @include cards;
         }
     }
-    .story-form__legend {
-
-    }
 }
 @media #{$desktop-widths} {
     .story-form__item {
@@ -277,7 +282,7 @@
         }
         &--user-contacts {
             display: block;
-            padding: 35px 59px 24px;
+            padding: 35px 59px 14px;
         }
         &--achievements {
             padding-right: 50px;
@@ -289,6 +294,27 @@
         }
         &--buttons {
             margin-bottom: 0;
+        }
+    }
+    .story-form__user-contacts-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+    }
+    .story-form__caption--contacts {
+        padding: 0;
+        padding-left: 20px;
+        margin: 0;
+        width: 46.27%;
+        box-sizing: border-box;
+        &:first-of-type {
+            margin-bottom: 0;
+            order: 2;
+        }
+        &:last-of-type {
+            order: 3;
         }
     }
     .story-form {
@@ -310,7 +336,7 @@
         width: 45.73%;
         margin-right: 8.53%;
         &--contacts {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
         &:last-of-type {
             margin-right: 0;
@@ -328,9 +354,6 @@
         height: 173px;
         justify-content: flex-start;
     }
-    .story-form__field--contacts {
-        margin-bottom: 0;
-    }
     .story-form__checkbox-group {
         &:first-child {
         }
@@ -341,5 +364,4 @@
     .story-form__buttons-wrapper {
         margin-bottom: 0;
     }
-
 }

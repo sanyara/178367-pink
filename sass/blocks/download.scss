@@ -1,5 +1,5 @@
 .download {
-    padding: 28px 0 30px;
+    padding: 29px 0 30px;
     width: 100%;
     color: #fff;
     background-color: #1d2631;
@@ -15,17 +15,9 @@
     margin-bottom: 5px;
     justify-content: space-between;
     align-items: center;
-
-/*
-    font-size: 0;
-    padding: 25px 0 5px;
-    text-align: center;
-    */
 }
 .download__link {
-
     @include size(50px, 80px);
-
     background-color: #fff;
     &--apple {
         background: transparent url('../img/logo-apple.svg') no-repeat 50% 30%;
@@ -47,7 +39,6 @@
     width: 240px;
     text-align: center;
 }
-
 @media #{$tablet-widths} {
     .download {
         padding: 26px 0 30px;

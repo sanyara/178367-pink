@@ -10,21 +10,20 @@
     &--promo {
         padding: 0;
         min-height: 462px;
+        background-color: $primary-color;
         background:  url("../img/iphone-hand-mobile@1x.png") no-repeat 0 177px,
                      url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
         background-size: auto, auto;
         @media #{$retina} {
-            background: url("../img/iphone-hand-mobile@2x.png") no-repeat 0 32.8%,
+            background: url("../img/iphone-hand-mobile@2x.png") no-repeat 0 39.8%,
                         url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 0%;
             background-size: 80%, cover;
         }
     }
-
 }
 .main-header__wrapper {
-
     &--promo {
-        height: 462px;
+        height: 461px;
     }
 }
 .main-header__title {
@@ -37,7 +36,6 @@
         display: none;
     }
 }
-
 @media #{$tablet-widths} {
     .main-header {
         width: 100%;
@@ -119,7 +117,6 @@
             font-size: 50px;
             line-height: 60px;
         }
-
     }
     .main-header__wrapper {
         margin: 0 auto;

@@ -14,12 +14,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .gallery__item {
     padding: 0 6.4%;
     width: 100%;
-
     margin-bottom: 20px;
     &:last-child {
         margin-bottom: 0;
@@ -32,7 +30,6 @@
 .gallery__photo {
     position: relative;
     display: block;
-
     img {
         display: block;
         width: 100%;
@@ -60,7 +57,6 @@
     min-width: 246px;
     flex-wrap: wrap;
     background-color: #f2f2f2;
-
 }
 .gallery__author {
     margin-right: 3px;
@@ -91,13 +87,8 @@
         color: $secondary-color;
     }
 }
-
 @media #{$tablet-widths} {
     .gallery__photo {
-
-        &--best {
-
-        }
         &--best::before {
             @include position-pseudo(57px, auto, auto, 40px);
             @include size(140px, 36px);
@@ -108,19 +99,15 @@
             text-align: center;
         }
     }
-
     .gallery__header {
         font-size: 18px;
         padding: 92px 70px 76px;
     }
-
     .gallery__comments-wrapper {
         margin: 0;
         padding: 0 5.71%;
     }
-
     .gallery__comments {
-
         width: 100%;
         padding: 24px 28px 50px;
         box-sizing: border-box;
@@ -131,8 +118,6 @@
             margin: 0 auto;
             padding: 24px 28px 14px;
             min-height: 100px;
-
-
         }
     }
     .gallery__like-btn {
@@ -154,7 +139,6 @@
             @include position-pseudo(4px, auto, auto, 3px);
         }
     }
-
     .gallery__item {
         position: relative;
         display: flex;
@@ -180,19 +164,10 @@
         flex-wrap: wrap;
         justify-content: center;
         align-content: stretch;
-
     }
-
-
 }
-
-
 @media #{$desktop-widths} {
     .gallery__photo {
-
-        &--best {
-
-        }
         &--best::before {
             @include position-pseudo(54px, auto, auto, 130px);
             @include size(140px, 36px);
@@ -222,9 +197,7 @@
             min-height: 0;
         }
     }
-
     .gallery__item {
-
         margin: 0 0.83%;
         margin-bottom: 53px;
         width: 25%;
@@ -245,7 +218,5 @@
         &--best::before {
             @include position-pseudo(4px, auto, auto, 6px);
         }
-
     }
-
 }

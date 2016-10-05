@@ -1,16 +1,10 @@
 .social-link {
-
     @include size(51px, 51px);
     position: relative;
-
     text-decoration: none;
     border-radius: 50%;
     box-shadow: inset 0 0 0 3px #e9ebec;
     font-size: 0;
-
-    &:last-child {
-
-    }
     &--tw {
         background: transparent url("../img/icon-twitter.svg") no-repeat 50% 50%;
     }
@@ -27,7 +21,4 @@
 .social-link:active {
     box-shadow: inset 0 0 0 3px #e9ebec;
     opacity: 0.3;
-}
-@media #{$tablet-widths} {
-
 }

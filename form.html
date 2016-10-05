@@ -77,7 +77,7 @@
                 <h2 class="main-header__title  main-header__title--long">Конкурс на самое безбашенное путешествие с Пинк</h2>
             </div>
             <section class="competition">
-                <p class="competition__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+                <p class="competition__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span></p>
                 <form class="story-form" onsubmit="return validate()">
                     <div class="story-form__item  story-form__item--name">
                         <div class="story-form__field-group">
@@ -123,11 +123,13 @@
                         </div>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--user-contacts">
-                        <legend class="story-form__item-title  story-form__item-title--user-contacts">Контактная информация</legend>
-                        <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
-                        <input class="story-form__field  story-form__field--contacts  story-form__field--tel" id="tel" type="text" name="tel" value="Номер, пожалуйста">
-                        <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
-                        <input class="story-form__field  story-form__field--contacts  story-form__field--mail" id="address" type="text" name="mail" value="Введите почту">
+                            <legend class="story-form__item-title  story-form__item-title--user-contacts">Контактная информация</legend>
+                            <div class="story-form__user-contacts-wrapper">
+                                <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
+                                <input class="story-form__field  story-form__field--contacts  story-form__field--tel" id="tel" type="text" name="tel" value="Номер, пожалуйста">
+                                <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
+                                <input class="story-form__field  story-form__field--contacts  story-form__field--mail" id="address" type="text" name="mail" value="Введите почту">
+                            </div>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--platform">
                         <legend class="story-form__item-title  story-form__item-title--platform">С каким приложением путешествовали?</legend>

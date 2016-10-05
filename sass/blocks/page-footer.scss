@@ -14,8 +14,6 @@
     @include size(27px, 35px);
     vertical-align: middle;
     font-size: 0;
-/*    background: transparent url("../img/logo-htmlacademy.svg") no-repeat 50% bottom;
-*/
 }
 .page-footer__copyright-text {
     @include cards;
@@ -36,11 +34,6 @@
 .page-footer--index-mobile {
     display: none;
 }
-
-.page-footer__wrapper {
-
-
-}
 .page-footer__logo-desktop {
     display: none;
 }
@@ -60,9 +53,7 @@
 .logo--footer:active .page-footer__logo-svg-glasses path {
     opacity: 0.3;
 }
-
 @media #{$tablet-widths} {
-
     .page-footer {
         display: flex;
         flex-direction: row;
@@ -75,9 +66,6 @@
         justify-content: space-between;
         align-items: center;
     }
-    .page-footer__social {
-
-    }
     .page-footer__copyright {
         width: 150px;
         padding: 0;
@@ -85,10 +73,6 @@
         box-sizing:border-box;
     }
 }
-
-
-
-
 @media #{$desktop-widths} {
     .page-footer {
         padding:74px 10.83% 76px;
