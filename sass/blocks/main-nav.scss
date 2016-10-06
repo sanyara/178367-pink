@@ -1,17 +1,15 @@
 .main-nav {
     background-color: $primary-color;
-
 }
 .main-nav__header {
     position: relative;
     width: 100%;
     padding: 21px 20px 25px;
     background-color:  $primary-color;
-    border: 1px solid black;
+    border: 1px solid #010101;
     border-left-style: none;
     border-right-style: none;
     box-sizing: border-box;
-    box-shadow: 0 0 2px 1px #090c10;
 }
 .main-nav--closed .main-nav__header {
     position: absolute;
@@ -23,6 +21,7 @@
 .main-nav__list {
     @include block-reset;
     list-style: none;
+    box-shadow: 0 0 2px 2px #1d2630;
 }
 .main-nav--closed .main-nav__list {
     display: none;
@@ -39,12 +38,17 @@
     border-left-style: none;
     border-right-style: none;
 }
-.main-nav__link:hover {
+.main-nav__link--active {
+    box-shadow: inset 0 1px 1px 0px #1d2630;
+    border-top-color: #1d2630;
+}
+.main-nav__item:not(.main-nav__item--active) .main-nav__link:hover {
     color: $secondary-color;
 }
-.main-nav__link:active {
+.main-nav__item:not(.main-nav__item--active) .main-nav__link:active {
     color: rgba($secondary-color, 0.3);
 }
+
 .main-nav__btn {
     @include btn-reset;
     @include size(23px, 23px);
@@ -53,7 +57,6 @@
     background-color: transparent;
     cursor: pointer;
 }
-
 .main-nav--opened {
     position: absolute;
     top: 0;
@@ -113,7 +116,7 @@
         display: none;
     }
 }
-.main-nav__logo:hover .main-nav__logo-svg-group path {
+.main-nav__logo:hover:not(.main-nav__logo--index) .main-nav__logo-svg-group path {
     fill: $secondary-color;
 }
 .main-nav__logo:active .main-nav__logo-svg-group path {
@@ -133,7 +136,6 @@
 .main-nav--nojs .main-nav__header {
     position: static;
 }
-
 @media #{$tablet-widths} {
     .main-nav__header {
         padding: 26px 40px 42px;
@@ -147,9 +149,6 @@
     .main-nav__btn {
     @include position(44px, auto, auto, 40px);
     }
-
-
-
     .main-nav--closed .main-nav__btn {
         top: 43px;
     }
@@ -158,7 +157,6 @@
     }
     .main-nav__logo .main-nav__logo-tablet {
         display: block;
-
     }
     .main-nav__logo-tablet:hover {
         fill:red;
@@ -166,15 +164,6 @@
     .main-nav__logo {
         @include cards;
         position: relative;
-    /*    padding-left: 70px;
-        img {
-            visibility: hidden;
-        }
-        &::before {
-            @include position-pseudo(-17px, 0px);
-            @include size(146px, 40px);
-            background: rgba(255, 255, 255, 0.2) url("../img/logo-pink-blue-mobile.svg");
-        }   */
     }
 }
 
@@ -185,7 +174,6 @@
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
-
     }
     .main-nav__header, .main-nav--closed .main-nav__header {
         position: static;
@@ -193,7 +181,6 @@
         width: 150px;
         background: none;
     }
-
     .main-nav__logo .main-nav__logo-tablet {
         display: none;
     }
@@ -208,6 +195,9 @@
     }
     .main-nav__item {
         padding-top: 5px;
+    }
+    .main-nav__link--active {
+        box-shadow: none;
 
     }
     .main-nav__link {

@@ -9,29 +9,18 @@
     }
 }
 .page-header__bar {
-
     width: 100%;
     padding: 20px 20px 20px;
     background-color:  $primary-color;
-
     border: 1px solid black;
     border-left-style: none;
     border-right-style: none;
     box-sizing: border-box;
-
 }
-
-
-
-
 @media #{$tablet-widths} {
     .page-header__bar {
-
         padding: 43px 40px 35px;
-
     }
-
-
 }
 @media #{$desktop-widths} {
     .page-header__wrapper {
@@ -45,13 +34,11 @@
         @include clearfix;
         min-height: 110px;
         background-color: rgba(0, 0, 0, 0.3);
-
     }
     .page-header__bar {
         float: left;
         padding: 44px 0 36px;
         width: 150px;
-
         background-color: transparent;
         border:none;
     }

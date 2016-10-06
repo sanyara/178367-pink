@@ -4,6 +4,10 @@
 }
 .feedback-slider__item {
     @include block-reset;
+    display: none;
+    &--active {
+        display: block;
+    }
 }
 .feedback-slider__author {
     @include font-size(18px, 30px, bold);
@@ -22,17 +26,14 @@
 .feedback-slider__wrapper {
     @include container;
 }
-
-
 @media #{$tablet-widths} {
     .feedback-slider {
         padding: 98px 0 0;
     }
-    .feedback-slider__item {
+    .feedback-slider__item--active {
         display: flex;
         flex-direction: column;
     }
-
     .feedback-slider__author {
         @include font-size(20px, 30px, bold);
         margin: 0;
@@ -43,33 +44,26 @@
         @include block-reset;
         display: block;
         line-height: 30px;
-
     }
     .feedback-slider__text {
         margin-bottom: 35px;
         font-size: 18px;
         order: -1;
     }
-
 }
-
 @media #{$desktop-widths} {
     .feedback-slider {
         background: transparent url(../img/quotes.png) 50% 20% no-repeat;
     }
-    .feedback-slider__item {
+    .feedback-slider__item--active {
         display: flex;
-
         position: relative;
         padding: 88px 0 40px;
-
     }
-
     .feedback-slider__author {
         @include font-size(24px, 30px, bold);
         padding-bottom: 0;
         margin-bottom: 2px;
-
     }
     .feedback-slider__author-desc {
         @include block-reset;
@@ -80,8 +74,5 @@
         width: 685px;
         margin: 0 auto;
         margin-bottom: 35px;
-
-
     }
-
 }

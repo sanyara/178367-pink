@@ -22,12 +22,10 @@
 .price__cost {
     @include font-size(24px, 30px, lighter);
 }
-
 .price__table {
     display: table;
     width: 834px;
     margin-bottom: 5px;
-
     border-collapse: collapse;
     transform: translateX(-258px);
     ul {
@@ -77,7 +75,6 @@
             @include position-pseudo(auto, auto, auto, 19px);
             @include size(27px, 27px);
             background: transparent url("../img/icon-no.svg") no-repeat 50% 50%;
-
         }
     }
     &--option-include::after {
@@ -86,7 +83,6 @@
         background: transparent url("../img/icon-yes.svg") no-repeat 50% 50%;
         background-size: cover;
     }
-
 }
 
 @media #{$tablet-widths} {
@@ -105,7 +101,6 @@
         width: 620px;
         margin-bottom: 68px;
         transform: translateX(0);
-
     }
     .price__column {
         display: table-column;
@@ -125,9 +120,6 @@
         &--header {
             padding: 12px 10px;
             text-transform: uppercase;
-            &:nth-of-type(2) {
-
-            }
         }
         &--header-hit::after {
             @include position-pseudo(0, 0);
@@ -144,7 +136,6 @@
             visibility: hidden;
         }
     }
-
     .price__name {
         font-size: 16px;
         margin-bottom: 0px;
@@ -153,20 +144,16 @@
         font-size: 18px;
         line-height: 24px;
     }
-
 }
-
 @media #{$desktop-widths} {
     .price {
         padding-top: 149px;
         &::before {
-
             @include position-pseudo(0, 0, auto, auto);
             @include size(100%, 82px);
             background: linear-gradient(to bottom right, #fff 50%, #f2f2f2 50.5%);
         }
     }
-
     .price__table {
         margin-bottom: 97px;
         width: 940px;
@@ -174,7 +161,6 @@
     .price__column {
         width: 235px;
     }
-
     .price__cell {
         display: table-cell;
         padding: 13px 21px 8px;
@@ -205,8 +191,6 @@
         @include font-size(24px, 30px, lighter);
     }
 }
-
-
 .price__option {
     position: relative;
     padding: 15px 21px;

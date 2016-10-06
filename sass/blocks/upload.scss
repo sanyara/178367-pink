@@ -16,7 +16,6 @@
         margin: 0 auto;
     }
 }
-
 .upload__editor {
     padding-bottom: 40px;
     background-color: #f2f2f2;
@@ -59,7 +58,6 @@
 .upload__tool-contrast-fill {
     fill: #b5b9be;
 }
-
 .upload__tool-icon--active {
     fill: $secondary-color;
 }
@@ -71,7 +69,6 @@
 }
 .upload__tool-range {
     display: none;
-/*    padding: 11px 18px 34px 55px; */
     border-bottom: 1px solid #dddfe0;
 }
 .upload__tool-scale {
@@ -81,7 +78,6 @@
     height: 2px;
     background-color: $primary-color;
 }
-
 .upload__tool-toggle {
     @include position(-5px, auto, auto, 36px);
     @include size(10px, 10px);
@@ -113,7 +109,6 @@
     box-shadow: 0 0 0 2px $secondary-color;
     cursor: pointer;
 }
-
 @media #{$tablet-widths} {
     .upload__header {
         padding: 45px 30px 67px;
@@ -124,14 +119,11 @@
         flex-wrap: wrap;
         justify-content: center;
         padding-bottom: 16px;
-
     }
     .upload__photo {
         padding: 57px 3.21% 0 0;
-
         width: 300px;
         height: 400px;
-
         img {
             @include block-reset;
             display: block;
@@ -151,9 +143,6 @@
     .upload__tool-range {
         display: block;
         width: 78.45%;
-    /*    padding: 11px 18px 34px 55px; */
-
-
     }
     .upload__tool-scale {
         width: auto;
@@ -161,7 +150,6 @@
     .upload__range {
         display: none;
     }
-
     .upload__tool {
         display: flex;   /* */
         align-items: center;
@@ -171,30 +159,23 @@
         @include size(auto,auto);
         width: auto;
         border-bottom: 1px solid #dddfe0;
-
         &--crop {
-
             .upload__tool-toggle {
                 @include position(-4px, 74%, auto, auto);
             }
         }
         &--fill {
-
             .upload__tool-toggle {
                 @include position(-4px, 14.5%, auto, auto);
             }
         }
         &--contrast {
-
             .upload__tool-toggle {
                 @include position(-4px, 49%, auto, auto);
             }
         }
     }
-
-
     .upload__tool-icon {
-        /*margin-right: 31px;*/
         @include size(24px, 24px);
         cursor: pointer;
         margin-left: 3px;
@@ -205,9 +186,6 @@
         margin-left: 7px;
     }
 }
-
-
-
 @media #{$desktop-widths} {
     .upload__header {
         padding: 6px 30px 66px;
@@ -217,7 +195,6 @@
         flex-wrap: wrap;
         justify-content: center;
         padding-bottom: 32px;
-
         width: 78.3%;
         margin: 0 auto 26px;
     }
@@ -230,33 +207,27 @@
         flex-direction: row;
         justify-content: flex-start;
         align-content: flex-start;
-
     }
     .upload__tool {
         width: 100%;
         padding: 14px 30px 13px 0;
         background-color: #f2f2f2;
         &--crop {
-
             .upload__tool-toggle {
                 @include position(-4px, 25%, auto, auto);
             }
         }
         &--fill {
-
             .upload__tool-toggle {
                 @include position(-4px, 86%, auto, auto);
             }
         }
         &--contrast {
-
             .upload__tool-toggle {
                 @include position(-4px, 56%, auto, auto);
             }
         }
-
     }
-
     .upload__tool-range {
         padding: 0;
         width: 75.6%;
