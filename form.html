@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Поделитесь своей историей</title>
         <link href="css/style.css" rel="stylesheet">
+        <script src="js/picturefill.js" async></script>
     </head>
     <body>
         <header class="page-header">
@@ -85,8 +86,8 @@
                             <input class="story-form__field" type="text" name="surname" id="surname-field" value="Укажите фамилию">
                         </div>
                         <div class="story-form__field-group">
-                            <label class="story-form__caption" for="firstname=field">Имя:</label>
-                            <input class="story-form__field" type="text" name="firstname" id="firstname=field" value="Введите ваше имя">
+                            <label class="story-form__caption" for="firstname-field">Имя:</label>
+                            <input class="story-form__field" type="text" name="firstname" id="firstname-field" value="Введите ваше имя">
                         </div>
                         <div class="story-form__field-group">
                             <label class="story-form__caption" for="patronym-field">Отчество:</label>
@@ -94,7 +95,8 @@
                         </div>
                     </div>
                     <fieldset class="story-form__item  story-form__item--achievements">
-                        <legend class="story-form__item-title">Ваши безбашенные достижения в путешествии</legend>
+                        <!--align для firefox, работает, но валидатор ругается-->
+                        <legend class="story-form__item-title" align="center"><span>Ваши безбашенные достижения в путешествии</span></legend>
                         <div class="story-form__checkbox-wrapper">
                             <div class="story-form__checkbox-group">
                                 <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
@@ -123,31 +125,31 @@
                         </div>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--user-contacts">
-                            <legend class="story-form__item-title  story-form__item-title--user-contacts">Контактная информация</legend>
-                            <div class="story-form__user-contacts-wrapper">
-                                <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
-                                <input class="story-form__field  story-form__field--contacts  story-form__field--tel" id="tel" type="text" name="tel" value="Номер, пожалуйста">
-                                <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
-                                <input class="story-form__field  story-form__field--contacts  story-form__field--mail" id="address" type="text" name="mail" value="Введите почту">
-                            </div>
+                        <legend class="story-form__item-title  story-form__item-title--user-contacts" align="center"><span>Контактная информация</span></legend>
+                        <div class="story-form__user-contacts-wrapper">
+                            <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
+                            <input class="story-form__field  story-form__field--contacts  story-form__field--tel" id="tel" type="text" name="tel" value="Номер, пожалуйста">
+                            <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
+                            <input class="story-form__field  story-form__field--contacts  story-form__field--mail" id="address" type="text" name="mail" value="Введите почту">
+                        </div>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--platform">
-                        <legend class="story-form__item-title  story-form__item-title--platform">С каким приложением путешествовали?</legend>
-                        <input class="story-form__radio" id="radio-1" type="radio" name="app-type-radio" checked>
-                        <label class="story-form__label  story-form__label--radio" for="radio-1">Pink для iOS</label>
-                        <input class="story-form__radio" id="radio-2" type="radio" name="app-type-radio">
-                        <label class="story-form__label  story-form__label--radio" for="radio-2">Pink на Android</label>
-                        <input class="story-form__radio" id="radio-3" type="radio" name="app-type-radio">
-                        <label class="story-form__label  story-form__label--radio" for="radio-3">Windows Phone</label>
+                        <legend class="story-form__item-title  story-form__item-title--platform" align="center"><span>С каким приложением путешествовали?</span></legend>
+                            <input class="story-form__radio" id="radio-1" type="radio" name="app-type-radio" checked>
+                            <label class="story-form__label  story-form__label--radio" for="radio-1">Pink для iOS</label>
+                            <input class="story-form__radio" id="radio-2" type="radio" name="app-type-radio">
+                            <label class="story-form__label  story-form__label--radio" for="radio-2">Pink на Android</label>
+                            <input class="story-form__radio" id="radio-3" type="radio" name="app-type-radio">
+                            <label class="story-form__label  story-form__label--radio" for="radio-3">Windows Phone</label>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--emotions">
-                        <legend class="story-form__item-title  story-form__item-title--emotions">Опишите свои эмоции</legend>
+                        <legend class="story-form__item-title  story-form__item-title--emotions" align="center"><span>Опишите свои эмоции</span></legend>
                         <textarea class="story-form__field  story-form__field--textarea" rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
                     </fieldset>
                     <fieldset class="story-form__item  story-form__item--buttons">
                         <div class="story-form__buttons-wrapper">
                             <button class="form-btn" id="sendFormBtn" type="submit">Отправить форму</button>
-                            <div class="story-form__legend">&#10038; — обязательные поля</div>
+                            <div class="story-form__legend">&#10038; — обязательные <span>для заполнения </span>поля</div>
                         </div>
                     </fieldset>
                 </form>

@@ -9,7 +9,7 @@
     background-color: #fff;
     z-index: 10;
     transform: translate(-50%, -50%);
-    box-shadow: 0 10px 20px 0 #dfdfdf;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
 }
 .form-popup--show {
     display: block;
@@ -53,7 +53,7 @@
     }
     .form-popup {
         width: 460px;
-        box-shadow: 0 5px 20px 0 #dfdfdf;
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
         &--failure {
             padding-bottom: 50px;
         }
@@ -68,7 +68,7 @@
 }
 @media #{$desktop-widths} {
     .form-popup {
-        box-shadow: 0 10px 20px 0 #dfdfdf;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
     }
     .form-popup--desktop {
         width: 780px;

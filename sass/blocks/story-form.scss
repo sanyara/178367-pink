@@ -4,30 +4,44 @@
     min-width: 320px;
     flex-direction: column;
 }
+
 .story-form__item {
+    position: relative;
     @include block-reset;
-    padding: 0 20px;
+    padding: 115px 20px 0;
     margin-bottom: 31px;
     border: none;
     box-sizing: border-box;
+    &--name {
+        padding: 0 20px;
+        margin-bottom: 28px;
+    }
     &--achievements {
         padding-bottom: 2px;
         margin-bottom: 29px;
         background-color: #f2f2f2;
     }
     &--user-contacts {
+        padding: 0 20px;
         margin-bottom: 40px;
     }
     &--platform {
+        padding: 111px 20px 2px;
         margin-bottom: 20px;
-        padding-bottom: 2px;
         background-color: #f2f2f2;
     }
     &--buttons {
+        padding: 0 20px;
         margin-bottom: 15px;
     }
     &--emotions {
-        margin-bottom: 26px;
+        padding: 72px 20px 0;
+        margin-bottom: 48px;
+    }
+}
+.story-form__legend {
+    span {
+        display: none;
     }
 }
 .story-form__caption {
@@ -38,20 +52,37 @@
     padding-left: 22px;
     color: $secondary-color;
 }
+.story-form__field::-ms-clear {
+    display: none;
+}
+
 .story-form__field {
     @include font-size(18px, 30px);
     width: 100%;
+    height: 61px;
     padding: 14px 21px 16px;
     margin-bottom: 16px;
+    margin-bottom: 0;
+    display: block;
     border-radius: 3px;
     outline: none;
     border: 1px solid #e5e5e5;
     box-sizing: border-box;
+    &--contacts {
+        margin-bottom: 17px;
+    }
     &--textarea {
+        min-height: 200px;
         padding: 15px 19px 32px;
     }
     &--emotions {
         padding: 36px 20px 18px;
+    }
+}
+.story-form__field-group {
+    margin-bottom: 17px;
+    &:nth-child(2) {
+        margin-bottom: 20px;
     }
 }
 .story-form__field:hover  {
@@ -61,23 +92,21 @@
     border: 1px solid $secondary-color;
 }
 .story-form__item-title {
-    @include block-reset;
-    @include cards;
-    @include font-size(14px, 18px, normal, uppercase);
-    padding: 36px 20px 43px;
-    color: $secondary-color;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    &--platform {
-        padding-bottom: 39px;
+    float: left;
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 36px 40px 43px;
+        width: 100%;
+        box-sizing: border-box;
+        @include font-size(14px, 18px, normal, uppercase);
+        color: $secondary-color;
+        text-align: center;
     }
-    &--user-contacts {
-        display: none;
-    }
-    &--emotions {
-        padding-bottom: 18px;
-    }
+}
+.story-form__item-title--user-contacts {
+    display: none;
 }
 .story-form__label {
     @include font-size(18px, 30px, normal);
@@ -144,11 +173,27 @@
 @media #{$tablet-widths} {
     .story-form__field-group {
         width: 100%;
-        margin-bottom: 53px;
+        margin-bottom: 54px;
         display: flex;
         align-items: center;
+        &:nth-child(2) {
+            margin-bottom: 53px;
+        }
         &:last-child {
             margin-bottom: 22px;
+        }
+    }
+    .story-form__item-title {
+        float: none;
+        display: block;
+        padding: 0 25px;
+        margin: 0 auto;
+        @include font-size(14px, 14px, normal, uppercase);
+        span {
+            position: static;
+            padding: 0;
+            width: auto;
+            box-sizing: inherit;
         }
     }
     .story-form__caption {
@@ -156,6 +201,7 @@
         margin-right: 19px;
         margin-bottom: 0;
         font-size: 14px;
+        line-height: 30px;
     }
     .story-form__field {
         flex-grow: 1;
@@ -170,13 +216,18 @@
         padding: 0 40px;
     }
     .story-form__item {
+        /*
         display: flex;
         flex-wrap: wrap;
+        */
+        display: block;
+
         padding: 0;
-        margin-bottom: 57px;
+        margin-bottom: 58px;
         font-size: 0;
         border: 1px solid #e5e5e5;
         border-radius: 2px;
+
         &:first-child {
             margin-bottom: 35px;
         }
@@ -185,28 +236,28 @@
             border: none;
         }
         &--achievements {
-            padding: 49px 58px 0;
-            margin-bottom: 60px;
+            padding: 48px 59px 0;
+            margin-bottom: 59px;
             width: 100%;
             order: -2;
             background-color: transparent;
         }
         &--platform {
-            padding: 50px 0 13px 59px;
+            padding: 50px 59px 14px 59px;
             width: 100%;
-            margin-bottom: 59px;
+            margin-bottom: 58px;
             order: -4;
             background-color: transparent;
         }
         &--user-contacts {
             position: relative;
-            padding: 36px 58px 27px;
+            padding: 37px 58px 29px;
             width: 100%;
             order: -3;
         }
         &--emotions {
-            padding: 37px 60px 49px;
-            margin-bottom: 67px;
+            padding: 37px 60px 50px;
+            margin-bottom: 70px;
             width: 100%;
         }
         &--buttons {
@@ -239,6 +290,9 @@
             }
     }
     .story-form__field {
+        &--textarea {
+            min-height: 193px;
+        }
         &--contacts {
             position: relative;
             margin-bottom: 10px;
@@ -261,13 +315,7 @@
             padding-left: 60px;
         }
     }
-    .story-form__item-title {
-        padding: 0 25px;
-        width: auto;
-        &--user-contacts {
-            @include cards;
-        }
-    }
+
 }
 @media #{$desktop-widths} {
     .story-form__item {
@@ -276,7 +324,7 @@
             padding-top: 15px;
         }
         &--platform {
-            padding: 50px 0 13px 74px;
+            padding: 50px 33px 13px 33px;
             width: 46.27%;
             box-sizing: border-box;
         }
@@ -343,7 +391,7 @@
         }
         &--textarea {
             width: 100%;
-            height: 127px;
+            min-height: 127px;
         }
     }
     .story-form__checkbox-wrapper {
@@ -363,5 +411,17 @@
     }
     .story-form__buttons-wrapper {
         margin-bottom: 0;
+    }
+    .story-form__label {
+        padding-left: 60px;
+        &--radio {
+            padding-left: 60px;
+            margin-left: 42px;
+        }
+    }
+    .story-form__legend {
+        span {
+            display: inline;
+        }
     }
 }

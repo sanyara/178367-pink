@@ -1,4 +1,5 @@
 .contacts {
+    min-width: 320px;
     padding: 43px 0 0;
     text-align: center;
 }
@@ -44,8 +45,8 @@
         @include position-pseudo(0, 0, auto, 0);
         @include size(100%, 35px);
         border-top: 35px solid #fff;
-        border-right: 50vw solid transparent;
-        border-left: 50vw solid transparent;
+        border-right: 47.5vw solid transparent;
+        border-left: 47.5vw solid transparent;
         z-index: 1;
         box-sizing: border-box;
     }
@@ -67,7 +68,7 @@
     .contacts__header  {
         display: block;
         width: 69.28%;
-        margin: 0 auto;
+        
         margin-bottom: 40px;
         letter-spacing: -1px;
     }

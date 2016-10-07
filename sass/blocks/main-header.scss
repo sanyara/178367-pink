@@ -1,7 +1,9 @@
 .main-header {
     padding: 98px 0 0;
+    padding: 95px 0 0;
     min-width: 320px;
     min-height: 139px;
+    min-height: 142px;
     background:  url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
     background-size: auto;
     @media #{$retina} {
