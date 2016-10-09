@@ -184,9 +184,21 @@
         }
     }
     .story-form__item-title {
-        float: none;
-        display: block;
+        display: table;
         padding: 0 25px;
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        width: auto;
+        transform: translateX(-50%);
+        text-align: center;
+        background: #fff;
+
+
+        float: none;
+        /*
+        display: block;
+        padding: 0 25px; */
         margin: 0 auto;
         @include font-size(14px, 14px, normal, uppercase);
         span {
@@ -194,6 +206,12 @@
             padding: 0;
             width: auto;
             box-sizing: inherit;
+        }
+        &--platform {
+            width: 370px;
+        }
+        &--achievements {
+            width: 440px;
         }
     }
     .story-form__caption {
@@ -227,36 +245,34 @@
         font-size: 0;
         border: 1px solid #e5e5e5;
         border-radius: 2px;
-
-        &:first-child {
-            margin-bottom: 35px;
-        }
         &--name {
+            margin-bottom: 46px;
             order: -5;
             border: none;
         }
         &--achievements {
-            padding: 48px 59px 0;
-            margin-bottom: 59px;
+            padding: 56px 59px 0;
+            margin-bottom: 68px;
             width: 100%;
             order: -2;
             background-color: transparent;
         }
         &--platform {
-            padding: 50px 59px 14px 59px;
+            padding: 56px 59px 14px 59px;
             width: 100%;
-            margin-bottom: 58px;
+            margin-bottom: 67px;
             order: -4;
             background-color: transparent;
         }
         &--user-contacts {
             position: relative;
-            padding: 37px 58px 29px;
+            padding: 46px 58px 29px;
+            margin-bottom: 66px;
             width: 100%;
             order: -3;
         }
         &--emotions {
-            padding: 37px 60px 50px;
+            padding: 46px 60px 50px;
             margin-bottom: 70px;
             width: 100%;
         }
@@ -324,26 +340,29 @@
             padding-top: 15px;
         }
         &--platform {
-            padding: 50px 33px 13px 33px;
+            margin-top: 10px;
+            padding: 58px 33px 13px 33px;
             width: 46.27%;
             box-sizing: border-box;
         }
         &--user-contacts {
             display: block;
-            padding: 35px 59px 14px;
+            padding: 43px 59px 14px;
         }
         &--achievements {
             padding-right: 50px;
-            margin-bottom: 57px;
+            margin-bottom: 67px;
         }
         &--emotions {
-            padding-top: 35px;
-            padding-bottom: 43px;
+            padding-top: 42px;
+            padding-bottom: 44px;
+            margin-bottom: 67px;
         }
         &--buttons {
             margin-bottom: 0;
         }
     }
+
     .story-form__user-contacts-wrapper {
             display: flex;
             flex-direction: row;
@@ -371,13 +390,16 @@
         justify-content: space-between;
     }
     .story-form__item-title {
-        padding: 0 15px;
         width: auto;
+        &--platform {
+            width: 86%;
+        }
+        /*
         &--user-contacts {
             display: block;
             margin: 0;
             padding: 0;
-        }
+        }   */
     }
     .story-form__field {
         @include cards;
@@ -393,6 +415,9 @@
             width: 100%;
             min-height: 127px;
         }
+    }
+    .story-form__field-group {
+        margin-bottom: 56px;
     }
     .story-form__checkbox-wrapper {
         display: flex;

@@ -51,10 +51,11 @@
         box-sizing: border-box;
     }
 }
+/*
 .contacts__map-rapper {
     margin: 0 auto;
     width: 1200px;
-}
+}*/
 @media #{$tablet-widths} {
     .contacts {
         display: flex;
@@ -68,7 +69,7 @@
     .contacts__header  {
         display: block;
         width: 69.28%;
-        
+
         margin-bottom: 40px;
         letter-spacing: -1px;
     }

@@ -1,5 +1,5 @@
  var center = {lat: 59.9362, lng: 30.3213};
- var icon = '../img/map-marker.png'
+ var icon = '../img/icon-map-marker.svg'
  function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: center,
