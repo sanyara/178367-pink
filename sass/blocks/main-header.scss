@@ -1,11 +1,12 @@
 .main-header {
-    padding: 98px 0 0;
+    padding: 95px 0 0;
     min-width: 320px;
-    min-height: 139px;
+    min-height: 142px;
     background:  url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
     background-size: auto;
     @media #{$retina} {
         background:  url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 0%;
+        background-size: 700px;
     }
     &--promo {
         padding: 0;
@@ -15,9 +16,9 @@
                      url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
         background-size: auto, auto;
         @media #{$retina} {
-            background: url("../img/iphone-hand-mobile@2x.png") no-repeat 0 39.8%,
+            background: url("../img/iphone-hand-mobile@2x.png") no-repeat left 0 bottom 271px,
                         url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 0%;
-            background-size: 80%, cover;
+            background-size: 258px, 700px;
         }
     }
 }
@@ -46,6 +47,7 @@
         box-sizing: border-box;
         @media #{$retina} {
             background: url("../img/bg-back-tablet@2x.jpg") no-repeat 50% 0%;
+            background-size: 1200px;
         }
         &--promo {
             padding: 0 40px;
@@ -54,9 +56,9 @@
                          url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0%;
             background-size: auto, cover;
             @media #{$retina} {
-                background: url("../img/iphone-hand-tablet@2x.png") no-repeat 50% 100%,
+                background: url("../img/iphone-hand-tablet@2x.png") no-repeat left 50% bottom 0,
                             url("../img/bg-back-tablet@2x.jpg") no-repeat 50% 0%;
-                background-size: contain, cover;
+                background-size: 700px, cover;
             }
         }
     }
@@ -89,6 +91,7 @@
         background-size: auto;
         @media #{$retina} {
             background: url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0%;
+            background-size: 5120px;
         }
         &--promo {
             min-height: 854px;
@@ -100,7 +103,7 @@
             @media #{$retina} {
                 background: url("../img/iphone-hand-desktop@2x.png") no-repeat 98% 100%,
                             url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0%;
-                background-size: contain, cover;
+                background-size: 1050px, cover;
             }
         }
     }

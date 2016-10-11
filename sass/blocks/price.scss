@@ -1,5 +1,6 @@
 .price {
     position: relative;
+    min-width: 320px;
     padding-top: 90px;
     padding-bottom: 7px;
     background-color: #f2f2f2;
@@ -16,7 +17,7 @@
     @include container;
 }
 .price__name {
-    @include font-size(18px, 30px, bold);
+    @include font-size(18px, 30px, bold, uppercase);
     margin-bottom: 3px;
 }
 .price__cost {
@@ -42,6 +43,7 @@
     border-top: none;
     background-color: #fff;
     text-align: left;
+    background-clip: padding-box;
     &:first-child {
         display: none;
     }
@@ -52,6 +54,7 @@
         border-bottom: none;
         color: #fff;
         text-align: center;
+        background-clip: padding-box;
         &-hit:after {
             @include position-pseudo(0, -2px);
             @include size(73px, 73px);
@@ -73,8 +76,8 @@
         position: relative;
         &::after {
             @include position-pseudo(auto, auto, auto, 19px);
-            @include size(27px, 27px);
-            background: transparent url("../img/icon-no.svg") no-repeat 50% 50%;
+            @include size(30px, 30px);
+            background: transparent url("../img/icon-no.svg") no-repeat 0% 50%;
         }
     }
     &--option-include::after {
@@ -107,12 +110,13 @@
         width: 155px;
     }
     .price__cell {
-        padding: 7px 15px 3px;
+        padding: 7px 15px 8px;
         text-transform: none;
-        font-size: 0;
+        text-indent: -9999px;
         &:first-child {
             display: table-cell;
             font-size: 14px;
+            text-indent: 0;
             &::after {
                 display: none;
             }
@@ -120,6 +124,7 @@
         &--header {
             padding: 12px 10px;
             text-transform: uppercase;
+            text-indent: 0;
         }
         &--header-hit::after {
             @include position-pseudo(0, 0);
@@ -134,6 +139,7 @@
         }
         &--cleared {
             visibility: hidden;
+            border-left: none;
         }
     }
     .price__name {
@@ -163,8 +169,7 @@
     }
     .price__cell {
         display: table-cell;
-        padding: 13px 21px 8px;
-        font-size: 0;
+        padding: 13px 21px 13px;
         &:first-child {
             display: table-cell;
             font-size: 18px;
@@ -184,7 +189,7 @@
         }
     }
     .price__name {
-        @include font-size(18px, 30px, bold);
+        @include font-size(18px, 30px, bold, uppercase);
         margin-bottom: 3px;
     }
     .price__cost {

@@ -1,6 +1,9 @@
 .research {
   display: none;
 }
+.research__title br {
+    display: none;
+}
 @media #{$tablet-widths} {
     .research {
         display: block;
@@ -13,7 +16,8 @@
         margin: 0 auto;
         padding: 96px 0 27px 44%;
         box-sizing: border-box;
-        background: #fff url("../img/timer24.png") no-repeat 0 bottom;
+        background: #fff url("../img/icon-timer2.svg") no-repeat 0 bottom;
+        background-size: 238px;
     }
     .research__title {
         @include font-size(30px, 36px, bold);
@@ -26,6 +30,9 @@
         margin: 0;
         margin-bottom: 10px;
         width: 300px;
+    }
+    .research__title br {
+        display: inline;
     }
     .research__link {
         color: $secondary-color;
@@ -42,16 +49,22 @@
           margin: 0 auto;
           padding: 108px 0 113px 30.5%;
           box-sizing: border-box;
-          background: #f2f2f2 url("../img/timer24-desktop.png") no-repeat 0 16px;
+          background: #f2f2f2 url("../img/icon-timer2.svg") no-repeat 0 16px;
       }
       .research__title {
           width: 570px;
           margin-bottom: 21px;
       }
+      .research__title br {
+          display: none;
+      }
       .research__text {
           width: 525px;
           margin-bottom: 30px;
           @include font-size(18px, 30px);
+      }
+      .research__text br {
+          display: none;
       }
       .research__link {
           @include font-size(18px, 30px);

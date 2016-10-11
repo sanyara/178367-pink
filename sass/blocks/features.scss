@@ -18,11 +18,11 @@
 .features__list {
     position: relative;
     padding: 83px 20px 277px;
-    background:  #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat 50% 109%;
-    background-size: 157px auto;
+    background:  #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat left 50% bottom -42px;
+    background-size: 157px;
     @media #{$retina} {
-        background: #f2f2f2 url("../img/iphone-screen-mobile@2x.png") no-repeat 50% 505px;
-        background-size: 157px auto;
+        background: #f2f2f2 url("../img/iphone-screen-mobile@2x.png") no-repeat left 50% bottom -43px;
+        background-size: 157px;
     }
     &::before {
         @include position-pseudo(0, 0, auto, auto);
@@ -43,12 +43,18 @@
 .features__text {
     @include block-reset;
 }
+.features__text br {
+    display: none;
+}
 @media #{$tablet-widths} {
     .features {
         @include clearfix;
     }
     .features__offer {
         padding: 50px 40px 44px;
+    }
+    .features__text br {
+        display: inline;
     }
     .features__slogan {
         width: auto;
@@ -67,6 +73,9 @@
             background: linear-gradient(to bottom right, #fff 50%, #f2f2f2 50.5%);
         }
         background: #f2f2f2;
+        @media #{$retina} {
+            background-image: none;
+        }
     }
     .features__item {
         margin-bottom: 37px;
@@ -87,7 +96,7 @@
             z-index: 5;
             @media #{$retina} {
                 background:  transparent url("../img/iphone-screen-3-tablet@2x.png") no-repeat 50% 0;
-                background-size: cover;
+                background-size: 268px;
             }
         }
     }
@@ -131,20 +140,20 @@
         background: transparent url("../img/iphone-screen-1-desktop@1x.png") 50% top no-repeat;
         @media #{$retina} {
             background:  transparent url("../img/iphone-screen-1-desktop@2x.png") no-repeat 50% 0;
-            background-size: 125%;
+            background-size: 121%;
         }
         &:nth-child(2) {
             background: transparent url("../img/iphone-screen-2-desktop@1x.png") 50% top no-repeat;
             @media #{$retina} {
                 background:  transparent url("../img/iphone-screen-2-desktop@2x.png") no-repeat 50% 0;
-                background-size: 125%;
+                background-size: 121%;
             }
         }
         &:nth-child(3) {
             background: transparent url("../img/iphone-screen-3-desktop@1x.png") 50% top no-repeat;
             @media #{$retina} {
                 background:  transparent url("../img/iphone-screen-3-desktop@2x.png") no-repeat 50% 0;
-                background-size: 125%;
+                background-size: 121%;
             }
         }
         &--extended {
@@ -162,7 +171,7 @@
         &--extended::before {
             @include position-pseudo(-37px, 0px);
             @include size(302px, 351px);
-            background: transparent url("../img/timer24-desktop.png") 0% top no-repeat;
+
         }
     }
     .features__title {
@@ -179,5 +188,8 @@
             width: 530px;
             margin-bottom: 30px;
         }
+    }
+    .features__text br {
+        display: none;
     }
 }

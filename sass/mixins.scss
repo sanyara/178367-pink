@@ -2,7 +2,7 @@
     display: inline-block;
     vertical-align: top;
 }
-@mixin font-size($font-size: auto, $line-height: auto, $font-weight: auto, $transform: auto) {
+@mixin font-size($font-size: auto, $line-height: auto, $font-weight: auto, $transform: none) {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $font-weight;
