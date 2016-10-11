@@ -87,11 +87,11 @@
         padding: 173px 40px 101px;
         width: 100%;
         min-height: 394px;
-        background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0%;
-        background-size: auto;
+        background: url("../img/bg-back-desktop@1x.jpg") no-repeat left 50% bottom 100%;
+        background-size: 213%;
         @media #{$retina} {
             background: url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0%;
-            background-size: 5120px;
+            background-size: 213%;
         }
         &--promo {
             min-height: 854px;
