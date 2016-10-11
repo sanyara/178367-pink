@@ -91,7 +91,7 @@
         background-size: auto;
         @media #{$retina} {
             background: url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0%;
-            background-size: 2560px;
+            background-size: 5120px;
         }
         &--promo {
             min-height: 854px;
@@ -99,7 +99,7 @@
             margin-bottom: 27px;
             background:  url("../img/iphone-hand-desktop@1x.png") no-repeat 98% 100%,
                          url("../img/bg-back-desktop@1x-1.jpg") no-repeat 50% 0%;
-            background-size: auto, 1200px;
+            background-size: auto, 100%;
             @media #{$retina} {
                 background: url("../img/iphone-hand-desktop@2x.png") no-repeat 98% 100%,
                             url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0%;

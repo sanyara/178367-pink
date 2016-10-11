@@ -61,7 +61,19 @@
 .upload__tool-icon--active {
     fill: $secondary-color;
 }
-.upload__tool-icon:hover {
+.upload__tool-icon-btn {
+    @include size(48px, 48px);
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    &--contrast {
+        @include size(32px, 32px);
+    }
+}
+.upload__tool-icon-btn:hover .upload__tool-icon {
     fill: #8d949b;
 }
 .upload__tool-icon:hover .upload__tool-contrast-fill {
@@ -178,12 +190,22 @@
     .upload__tool-icon {
         @include size(24px, 24px);
         cursor: pointer;
-        margin-left: 3px;
-        margin-right: auto;
+        fill: $secondary-color;
+    }
+    .upload__tool-contrast-fill {
+        fill: $secondary-color;
     }
     .upload__tool--contrast .upload__tool-icon {
         @include size(16px, 16px);
-        margin-left: 7px;
+    }
+    .upload__tool-icon-btn {
+        @include size(24px, 24px);
+        margin-left: 3px;
+        margin-right: auto;
+        &--contrast {
+            @include size(16px, 16px);
+            margin-left: 7px;
+        }
     }
 }
 @media #{$desktop-widths} {
@@ -239,10 +261,17 @@
         width: 100%;
     }
     .upload__tool-icon {
-        @include size(45px, 45px);
+        @include size(47px, 47px);
     }
     .upload__tool--contrast .upload__tool-icon {
         @include size(32px, 32px);
-        margin-left: 7px;
+    }
+    .upload__tool-icon-btn {
+        @include size(45px, 45px);
+        &--contrast {
+            padding-top: 4px;
+            @include size(44px, 44px);
+            margin-left: 2px;
+        }
     }
 }

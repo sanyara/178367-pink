@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(grunt) {
- /* grunt.loadNpmTasks("grunt-browser-sync");
+/*grunt.loadNpmTasks("grunt-browser-sync");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
   grunt.loadNpmTasks("grunt-sass"); 
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-svgstore"); 
   grunt.loadNpmTasks("grunt-svgmin");
   grunt.loadNpmTasks("grunt-contrib-copy"); 
-  grunt.loadNpmTasks("grunt-contrib-clean"); */
+  grunt.loadNpmTasks("grunt-contrib-clean");*/
   
   require("load-grunt-tasks")(grunt);
   
@@ -55,7 +55,16 @@ module.exports = function(grunt) {
         }
       }  
     },
-    
+  
+    uglify: {
+      my_target: {
+        files: {
+        "build/js/script.min.js": ["js/script.js"],
+        "build/js/picturefill.min.js": ["js/picturefill.js"],
+        }
+      }
+    },
+   
     imagemin: {
       images: {
         options: {
@@ -158,6 +167,7 @@ module.exports = function(grunt) {
     "sass",
     "postcss",
     "csso",
+    "uglify",
     "symbols",
     "imagemin"
   ]);

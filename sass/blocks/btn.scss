@@ -75,14 +75,16 @@
         &--pink {
             margin: 0;
             margin-bottom: 25px;
-            margin-top: 157px;
-            margin-right: 37px;
+            margin-top: 145px;
+            margin-right: 31px;
             width: 185px;
             font-size: 18px;
         }
         &--disabled {
+            position: relative;
+            left: 10px;
             margin: 0;
-            margin-top: 157px;
+            margin-top: 145px;
             width: 185px;
             font-size: 18px;
             align-self: flex-start;
