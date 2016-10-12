@@ -171,9 +171,12 @@
         align-items: center;
         background-color: transparent;
     }
+    .main-nav__header {
+        border-top: none;
+    }
     .main-nav__header, .main-nav--closed .main-nav__header {
         position: static;
-        padding: 26px 0px 35px;
+        padding: 27px 0px 35px;
         width: 150px;
         background: none;
     }
